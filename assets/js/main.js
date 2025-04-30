@@ -12,6 +12,33 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
+// Logo Clock Animation
+document.addEventListener('DOMContentLoaded', function() {
+  var logoElement = document.getElementById("logo");
+  var hourHand = document.getElementById("hour");
+  var minuteHand = document.getElementById("minute");
+  
+  if (logoElement && hourHand && minuteHand) {
+    logoElement.addEventListener("mouseover", showCurrentTime, false);
+    logoElement.addEventListener("mouseout", resetClockHands, false);
+  }
+  
+  function showCurrentTime() {
+    const now = new Date();
+    
+    var hourdeg = (((now.getHours() + 9) % 12) + 3) * 30 + now.getMinutes() * 0.5;
+    hourHand.style.transform = "rotate(" + hourdeg + "deg)";
+    
+    var minutedeg = now.getMinutes() * 6;
+    minuteHand.style.transform = "rotate(" + minutedeg + "deg)";
+  }
+  
+  function resetClockHands() {
+    hourHand.style.transform = "rotate(90deg)";
+    minuteHand.style.transform = "rotate(0deg)";
+  }
+});
+
 // Smooth Scrolling for Anchor Links
 document.addEventListener('DOMContentLoaded', function() {
   const anchorLinks = document.querySelectorAll('a[href^="#"]:not([href="#"])');

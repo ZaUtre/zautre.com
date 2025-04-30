@@ -145,6 +145,24 @@ a:hover {
   aspect-ratio: auto;
 }
 
+/* Fix for the included SVG size */
+#logo {
+  height: 100%;
+}
+
+/* SVG Clock Element Styles */
+#hour {
+  transform-origin: 50px 50px;
+  transform: rotate(90deg);
+  transition: transform 0.5s ease-in-out;
+}
+
+#minute {
+  transform-origin: 50px 50px;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease-in-out;
+}
+
 .main-nav {
   display: flex;
   align-items: center;
