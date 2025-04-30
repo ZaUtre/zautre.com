@@ -1,0 +1,30 @@
+# Sample job listings for Zautre careers page
+- title: Senior SFCC Developer
+  type: Full-time
+  description: We're looking for an experienced Salesforce Commerce Cloud developer to join our team and work on projects for retail and luxury brands.
+  requirements:
+    - 4+ years of SFCC development experience
+    - Strong JavaScript/TypeScript skills
+    - Experience with SFRA and PWA implementation
+    - Knowledge of modern frontend technologies
+  link: /contact?job=senior-sfcc-developer
+
+- title: QA Automation Specialist
+  type: Full-time
+  description: Join our team as a QA Automation Specialist to ensure the quality and reliability of e-commerce implementations for our clients.
+  requirements:
+    - 3+ years of QA automation experience
+    - Experience with test automation frameworks
+    - Knowledge of e-commerce platforms (SFCC preferred)
+    - Strong analytical and problem-solving skills
+  link: /contact?job=qa-automation-specialist
+
+- title: Technical Project Manager
+  type: Full-time
+  description: Lead technical projects and coordinate development teams to deliver exceptional e-commerce solutions for our clients.
+  requirements:
+    - 5+ years of project management experience
+    - Experience with e-commerce projects
+    - Strong technical understanding
+    - Excellent communication and leadership skills
+  link: /contact?job=technical-project-manager

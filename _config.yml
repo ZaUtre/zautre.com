@@ -1,0 +1,53 @@
+# Zautre.com Configuration
+title: Zautre
+email: office@zautre.com
+description: >-
+  E-commerce solutions for tomorrow. Zautre is a dedicated team of web architects, 
+  developers and QA experts specializing in Salesforce Commerce Cloud (SFCC) 
+  solutions for retail and luxury brands.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://zautre.com" # the base hostname & protocol for your site
+phone: "+359878899569"
+address: "84 Cherni Vrah Blvd., fl. 5, 1407 Sofia, Bulgaria"
+github_username: zautre
+linkedin_username: zautre
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Navigation Structure
+header_pages:
+  - services.md
+  - projects.md
+  - about.md
+  - careers.md
+  - blog.md
+  - contact.md
+
+# Collections
+collections:
+  services:
+    output: true
+    permalink: /:collection/:name/
+  projects:
+    output: true
+    permalink: /:collection/:name/
+  team:
+    output: false
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - requirements.md
+  - jekyll-temp/
