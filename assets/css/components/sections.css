@@ -4,6 +4,8 @@
 .section {
   padding: var(--spacing-xl) 0;
   position: relative;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal overflow across all sections */
 }
 
 /* Section with light background */
@@ -112,4 +114,40 @@
 .section--gradient .section-lead,
 .section--dark .section-lead {
   color: rgba(255, 255, 255, 0.9);
+}
+
+/* Homepage Services Section */
+.services-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg); /* Increased padding to ensure cards don't touch edges */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.services-section .services-grid {
+  display: grid;
+  gap: var(--spacing-lg); /* Increased gap between cards */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Ensure proper grid layout for different screen sizes */
+@media (min-width: 768px) {
+  .services-section .services-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+  }
+}
+
+@media (min-width: 992px) {
+  .services-section .services-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
+  }
+}
+
+/* Ensure cards fill their space within the grid */
+.services-section .card {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
 }

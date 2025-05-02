@@ -7,6 +7,8 @@
   color: var(--white);
   padding: var(--spacing-xl) 0;
   text-align: center;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 .services-header h1 {
@@ -26,6 +28,8 @@
   /* Using reusable section component */
   background-color: var(--white);
   padding: var(--spacing-lg) 0;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 .services-overview .lead {
@@ -43,22 +47,31 @@
   /* Using reusable section component */
   padding: var(--spacing-xl) 0;
   background-color: var(--light-gray);
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 .services-cards-section .container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 var(--spacing-lg); /* Increased padding to ensure cards don't touch edges */
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Service options section - now using reusable components */
 .service-options-section {
   padding: var(--spacing-xl) 0;
   background-color: var(--white);
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 .service-options-section .container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 var(--spacing-sm);
+  width: 100%; /* Ensure container takes full width within its parent */
 }
 
 .service-options h2 {
@@ -88,6 +101,8 @@
   background-color: var(--white);
   position: relative;
   z-index: 1;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 /* Using reusable diagonal clip from sections.css */
@@ -104,25 +119,22 @@
 }
 
 .services-grid {
-  /* Using reusable grid component */
   display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--spacing-md);
-  margin-top: var(--spacing-lg);
-  z-index: 2;
-  position: relative;
-  margin-bottom: var(--spacing-xl);
+  gap: var(--spacing-lg); /* Increased gap between cards */
+  width: 100%;
+  box-sizing: border-box;
 }
 
+/* Ensure proper grid layout for different screen sizes */
 @media (min-width: 768px) {
   .services-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
   }
 }
 
 @media (min-width: 992px) {
   .services-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
   }
 }
 

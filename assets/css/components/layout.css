@@ -4,7 +4,8 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 var(--spacing-sm);
+  padding: 0 var(--spacing-md); /* Increased from spacing-sm to give more breathing room */
+  box-sizing: border-box; /* Ensure padding is included in width calculation */
 }
 
 .two-column {
