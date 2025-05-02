@@ -5,6 +5,13 @@ subtitle: Dedicated e-commerce experts since 2015
 permalink: /about/
 ---
 
+<section class="about-header">
+  <div class="container">
+    <h1>{{ page.title }}</h1>
+    <p class="subtitle">{{ page.subtitle }}</p>
+  </div>
+</section>
+
 <div class="about-intro">
   <p class="lead">Zautre is a dedicated team of web architects, developers and QA experts focused on delivering exceptional e-commerce solutions for retail and luxury brands worldwide.</p>
 </div>
