@@ -4,9 +4,11 @@
 @import 'components/variables.css';
 @import 'components/base.css';
 @import 'components/layout.css';
+@import 'components/grid.css';  /* New reusable grid system */
+@import 'components/cards.css'; /* New reusable card components */
+@import 'components/sections.css';
 @import 'components/header.css';
 @import 'components/hero.css';
-@import 'components/sections.css';
 @import 'components/services.css';
 @import 'components/projects.css';
 @import 'components/testimonials.css';

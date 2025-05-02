@@ -26,70 +26,92 @@ hero_video: hero.mp4
   </div>
 </div>
 
-<section class="expertise-section">
-  <h2>Salesforce Commerce Cloud Experts</h2>
-  <p>Zautre is a dedicated team of web architects, developers and QA specialists focused on delivering exceptional e-commerce solutions for retail and luxury brands.</p>
-  
-  <div class="expertise-stats">
-    <div class="stat">
-      <span class="number">Since 2015</span>
-      <span class="label">Trusted Partner</span>
+<section class="expertise-section section section--white">
+  <div class="container">
+    <div class="section-header">
+      <h2>Salesforce Commerce Cloud Experts</h2>
+      <p class="section-lead">Zautre is a dedicated team of web architects, developers and QA specialists focused on delivering exceptional e-commerce solutions for retail and luxury brands.</p>
     </div>
-    <div class="stat">
-      <span class="number">100%</span>
-      <span class="label">Certified Engineering Team</span>
-    </div>
-    <div class="stat">
-      <span class="number">100+</span>
-      <span class="label">SFCC Projects</span>
+    
+    <div class="expertise-stats grid grid--3col">
+      <div class="stat">
+        <span class="number">Since 2015</span>
+        <span class="label">Trusted Partner</span>
+      </div>
+      <div class="stat">
+        <span class="number">100%</span>
+        <span class="label">Certified Engineering Team</span>
+      </div>
+      <div class="stat">
+        <span class="number">100+</span>
+        <span class="label">SFCC Projects</span>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="services-section">
-  <h2>Our Services</h2>
-  <div class="services-grid">
-    {% for service in site.services %}
-      <div class="service-card">
-        <h3>{{ service.title }}</h3>
-        <p>{{ service.excerpt }}</p>
-        <a href="{{ service.url }}" class="read-more">Learn More</a>
-      </div>
-    {% endfor %}
-  </div>
-</section>
-
-<section class="featured-project">
-  <h2>Featured Project</h2>
-  {% assign featured_project = site.projects | where: "featured", true | first %}
-  {% if featured_project %}
-    <div class="project-showcase">
-      <div class="project-info">
-        <h3>{{ featured_project.title }}</h3>
-        <p>{{ featured_project.excerpt }}</p>
-        <a href="{{ featured_project.url }}" class="btn">View Project Details</a>
-      </div>
-      {% if featured_project.image %}
-        <div class="project-image">
-          <img src="{{ featured_project.image }}" alt="{{ featured_project.title }}">
+<section class="services-section section section--clip-diagonal">
+  <div class="container">
+    <div class="section-header">
+      <h2>Our Services</h2>
+    </div>
+    <div class="services-grid grid grid--3col">
+      {% for service in site.services %}
+        <div class="card card--service">
+          <h3>{{ service.title }}</h3>
+          <p>{{ service.excerpt }}</p>
+          <a href="{{ service.url }}" class="read-more">Learn More</a>
         </div>
-      {% endif %}
+      {% endfor %}
     </div>
-  {% endif %}
-</section>
-
-<section class="testimonial-section">
-  <h2>What Our Clients Say</h2>
-  <div class="testimonial">
-    <blockquote>
-      "Zautre's technical knowledge was impressive. They showed great understanding of our business requirements and delivered a solution that exceeded our expectations."
-    </blockquote>
-    <cite>— Client from Retail Industry</cite>
   </div>
 </section>
 
-<section class="cta-section">
-  <h2>Ready to transform your e-commerce experience?</h2>
-  <p>Let's discuss how Zautre can help your retail or luxury brand achieve its digital commerce goals.</p>
-  <a href="/contact" class="btn btn-large">Get in Touch</a>
+<section class="featured-project section section--with-decoration section--light">
+  <div class="container">
+    <div class="section-header">
+      <h2>Featured Project</h2>
+    </div>
+    {% assign featured_project = site.projects | where: "featured", true | first %}
+    {% if featured_project %}
+      <div class="project-showcase grid grid--halves grid--showcase">
+        <div class="card card--project">
+          <h3>{{ featured_project.title }}</h3>
+          <p>{{ featured_project.excerpt }}</p>
+          <a href="{{ featured_project.url }}" class="btn">View Project Details</a>
+        </div>
+        {% if featured_project.image %}
+          <div class="card--image">
+            <img src="{{ featured_project.image }}" alt="{{ featured_project.title }}">
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+<section class="testimonial-section section section--white">
+  <div class="container">
+    <div class="section-header">
+      <h2>What Our Clients Say</h2>
+    </div>
+    <div class="testimonial card">
+      <blockquote>
+        "Zautre's technical knowledge was impressive. They showed great understanding of our business requirements and delivered a solution that exceeded our expectations."
+      </blockquote>
+      <cite>— Client from Retail Industry</cite>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section section section--gradient">
+  <div class="container">
+    <div class="section-header">
+      <h2>Ready to transform your e-commerce experience?</h2>
+      <p class="subtitle">Let's discuss how Zautre can help your retail or luxury brand achieve its digital commerce goals.</p>
+    </div>
+    <div class="text-center">
+      <a href="/contact" class="btn btn-large">Get in Touch</a>
+    </div>
+  </div>
 </section>

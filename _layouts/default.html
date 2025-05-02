@@ -46,9 +46,9 @@
     {{ content }}
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer section section--dark">
     <div class="container">
-      <div class="footer-grid">
+      <div class="footer-grid grid grid--footer">
         <div class="footer-col">
           <h3>Zautre</h3>
           <p>E-commerce solutions for tomorrow</p>
@@ -73,21 +73,6 @@
             <li><a href="{{ '/careers' | relative_url }}">Careers</a></li>
             <li><a href="{{ '/contact' | relative_url }}">Contact Us</a></li>
           </ul>
-        </div>
-        <div class="footer-col social">
-          <h3>Connect With Us</h3>
-          <div class="social-links">
-            {% if site.github_username %}
-            <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener" aria-label="GitHub">
-              <svg class="icon"><use xlink:href="{{ '/assets/images/icons.svg#github' | relative_url }}"></use></svg>
-            </a>
-            {% endif %}
-            {% if site.linkedin_username %}
-            <a href="https://www.linkedin.com/company/{{ site.linkedin_username }}" target="_blank" rel="noopener" aria-label="LinkedIn">
-              <svg class="icon"><use xlink:href="{{ '/assets/images/icons.svg#linkedin' | relative_url }}"></use></svg>
-            </a>
-            {% endif %}
-          </div>
         </div>
       </div>
       <div class="footer-bottom">

@@ -2,33 +2,35 @@
 layout: default
 ---
 
-<div class="project-header">
+<div class="project-header section section--gradient">
   <div class="container">
-    <h1>{{ page.title }}</h1>
-    {% if page.subtitle %}
-    <p class="subtitle">{{ page.subtitle }}</p>
-    {% endif %}
-    {% if page.client %}
-    <div class="client-info">
-      <span>Client: {{ page.client }}</span>
-      {% if page.industry %}
-      <span class="separator">|</span>
-      <span>Industry: {{ page.industry }}</span>
+    <div class="section-header">
+      <h1>{{ page.title }}</h1>
+      {% if page.subtitle %}
+      <p class="subtitle">{{ page.subtitle }}</p>
+      {% endif %}
+      {% if page.client %}
+      <div class="client-info">
+        <span>Client: {{ page.client }}</span>
+        {% if page.industry %}
+        <span class="separator">|</span>
+        <span>Industry: {{ page.industry }}</span>
+        {% endif %}
+      </div>
       {% endif %}
     </div>
-    {% endif %}
   </div>
 </div>
 
-<div class="project-content">
+<div class="project-content section section--white">
   <div class="container">
     {% if page.image %}
-    <div class="project-hero-image">
+    <div class="project-hero-image card--image">
       <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
     </div>
     {% endif %}
     
-    <div class="project-details-grid">
+    <div class="project-details-grid grid grid--2col">
       <div class="project-main">
         {% if page.challenge %}
         <div class="project-section">
@@ -54,7 +56,7 @@ layout: default
         {% endif %}
         
         {% if page.testimonial %}
-        <div class="project-testimonial">
+        <div class="project-testimonial card">
           <blockquote>
             "{{ page.testimonial }}"
           </blockquote>
@@ -67,7 +69,7 @@ layout: default
       
       <div class="project-sidebar">
         {% if page.services or page.technologies %}
-        <div class="project-meta">
+        <div class="project-meta card">
           {% if page.services %}
           <div class="meta-section">
             <h3>Services</h3>
@@ -92,7 +94,7 @@ layout: default
         </div>
         {% endif %}
         
-        <div class="contact-cta">
+        <div class="contact-cta card">
           <h3>Have a similar project?</h3>
           <p>Let's discuss how we can help your business achieve similar results.</p>
           <a href="{{ '/contact' | relative_url }}" class="btn btn-primary">Get in Touch</a>
@@ -103,15 +105,17 @@ layout: default
 </div>
 
 {% if site.projects.size > 1 %}
-<div class="other-projects">
+<div class="other-projects section section--light">
   <div class="container">
-    <h2>Explore More Projects</h2>
-    <div class="projects-grid">
+    <div class="section-header">
+      <h2>Explore More Projects</h2>
+    </div>
+    <div class="projects-grid grid grid--3col">
       {% assign other_projects = site.projects | where_exp: "project", "project.url != page.url" | sample: 3 %}
       {% for project in other_projects %}
-      <div class="project-card">
+      <div class="card card--project">
         {% if project.image %}
-        <div class="project-image">
+        <div class="card--image">
           <img src="{{ project.image | relative_url }}" alt="{{ project.title }}">
         </div>
         {% endif %}

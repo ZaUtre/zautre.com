@@ -1,0 +1,137 @@
+/* Zautre.com - Reusable Card Components */
+
+/* Base Card Styles */
+.card {
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: var(--spacing-md);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  margin-bottom: var(--spacing-sm);
+}
+
+.card p {
+  color: var(--medium-gray);
+  margin-bottom: var(--spacing-md);
+}
+
+/* Service Card Variant */
+.card--service {
+  padding: var(--spacing-lg);
+  border-top: 3px solid transparent;
+}
+
+.card--service:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  border-top: 3px solid var(--accent-color);
+}
+
+.card--service h3 {
+  color: var(--primary-color);
+  font-size: 1.7rem;
+  transition: var(--transition);
+}
+
+.card--service:hover h3 {
+  color: var(--accent-color);
+}
+
+.card--service p {
+  flex: 1;
+}
+
+.card--service .read-more {
+  font-weight: 600;
+  color: var(--primary-color);
+  display: inline-flex;
+  align-items: center;
+  margin-top: auto;
+}
+
+.card--service .read-more::after {
+  content: '→';
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+.card--service:hover .read-more::after {
+  transform: translateX(5px);
+}
+
+/* Option Card Variant */
+.card--option {
+  background-color: var(--light-gray);
+}
+
+.card--option h3 {
+  color: var(--primary-color);
+  font-size: 1.4rem;
+}
+
+/* Project Card Variant */
+.card--project {
+  padding: var(--spacing-md);
+}
+
+.card--project h3 {
+  font-size: 2rem;
+  color: var(--dark-gray);
+}
+
+/* Image Card */
+.card--image img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+.card--image img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Stat Card - for expertise stats */
+.stat {
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: var(--spacing-md);
+  transition: var(--transition);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 120px;
+}
+
+.stat:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.stat .number {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-xs);
+  display: block;
+}
+
+.stat .label {
+  color: var(--medium-gray);
+  font-size: 1rem;
+}

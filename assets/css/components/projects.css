@@ -1,11 +1,13 @@
 /* Zautre.com - Projects Section Styles */
 
 .featured-project {
+  /* Using reusable section components */
   background-color: var(--light-gray);
   position: relative;
   overflow: hidden;
 }
 
+/* Using the decorative element pattern from sections.css */
 .featured-project::after {
   content: '';
   position: absolute;
@@ -19,6 +21,7 @@
 }
 
 .project-showcase {
+  /* Using reusable grid component */
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--spacing-lg);
@@ -34,33 +37,6 @@
   }
 }
 
-.project-info {
-  padding: var(--spacing-md);
-  background-color: var(--white);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-}
+/* Project info styles now use .card and .card--project from cards.css */
 
-.project-info h3 {
-  font-size: 2rem;
-  color: var(--dark-gray);
-  margin-bottom: var(--spacing-sm);
-}
-
-.project-info p {
-  color: var(--medium-gray);
-  margin-bottom: var(--spacing-md);
-}
-
-.project-image img {
-  width: 100%;
-  height: auto;
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  transition: var(--transition);
-}
-
-.project-image img:hover {
-  transform: scale(1.02);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-}
+/* Project image styles now use .card--image from cards.css */

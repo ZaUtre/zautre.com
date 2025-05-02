@@ -1,7 +1,8 @@
 /* Zautre.com - Services Section Styles */
 
-/* New services header styles for full width layout */
+/* Services header - using section components */
 .services-header {
+  /* Using reusable section component */
   background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
   color: var(--white);
   padding: var(--spacing-xl) 0;
@@ -22,11 +23,13 @@
 }
 
 .services-overview {
+  /* Using reusable section component */
   background-color: var(--white);
   padding: var(--spacing-lg) 0;
 }
 
 .services-overview .lead {
+  /* Using reusable section-lead component */
   font-size: 1.3rem;
   line-height: 1.6;
   color: var(--medium-gray);
@@ -35,8 +38,9 @@
   margin: 0 auto;
 }
 
-/* Services cards section */
+/* Services cards section - now using reusable components */
 .services-cards-section {
+  /* Using reusable section component */
   padding: var(--spacing-xl) 0;
   background-color: var(--light-gray);
 }
@@ -46,7 +50,7 @@
   margin: 0 auto;
 }
 
-/* Service options section */
+/* Service options section - now using reusable components */
 .service-options-section {
   padding: var(--spacing-xl) 0;
   background-color: var(--white);
@@ -64,6 +68,7 @@
 }
 
 .service-options-grid {
+  /* Using reusable grid component */
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--spacing-md);
@@ -75,36 +80,17 @@
   }
 }
 
-.option-card {
-  padding: var(--spacing-md);
-  background-color: var(--light-gray);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  transition: var(--transition);
-}
+/* Option card styles moved to cards.css as .card and .card--option */
 
-.option-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-.option-card h3 {
-  color: var(--primary-color);
-  font-size: 1.4rem;
-  margin-bottom: var(--spacing-sm);
-}
-
-.option-card p {
-  color: var(--medium-gray);
-}
-
-/* Original services section styles */
+/* Services section - now using reusable components */
 .services-section {
+  /* Using reusable section component */
   background-color: var(--white);
   position: relative;
   z-index: 1;
 }
 
+/* Using reusable diagonal clip from sections.css */
 .services-section::before {
   content: '';
   position: absolute;
@@ -118,6 +104,7 @@
 }
 
 .services-grid {
+  /* Using reusable grid component */
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--spacing-md);
@@ -139,54 +126,4 @@
   }
 }
 
-.service-card {
-  background-color: var(--white);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  padding: var(--spacing-lg);
-  transition: var(--transition);
-  border-top: 3px solid transparent;
-  display: flex;
-  flex-direction: column;
-}
-
-.service-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-  border-top: 3px solid var(--accent-color);
-}
-
-.service-card h3 {
-  color: var(--primary-color);
-  font-size: 1.7rem;
-  margin-bottom: var(--spacing-sm);
-  transition: var(--transition);
-}
-
-.service-card:hover h3 {
-  color: var(--accent-color);
-}
-
-.service-card p {
-  color: var(--medium-gray);
-  margin-bottom: var(--spacing-md);
-  flex: 1;
-}
-
-.service-card a.read-more {
-  font-weight: 600;
-  color: var(--primary-color);
-  display: inline-flex;
-  align-items: center;
-  margin-top: auto;
-}
-
-.service-card a.read-more::after {
-  content: '→';
-  margin-left: 5px;
-  transition: transform 0.3s ease;
-}
-
-.service-card:hover a.read-more::after {
-  transform: translateX(5px);
-}
+/* Service card styles moved to cards.css as .card and .card--service */

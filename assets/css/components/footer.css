@@ -1,6 +1,7 @@
 /* Zautre.com - Footer Styles */
 
 .site-footer {
+  /* Using reusable section component style pattern */
   background-color: var(--dark-gray);
   color: var(--white);
   padding: var(--spacing-xl) 0 var(--spacing-lg);
@@ -8,6 +9,7 @@
 }
 
 .footer-grid {
+  /* Using reusable grid component pattern */
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--spacing-lg);
@@ -22,6 +24,7 @@
 
 @media (min-width: 992px) {
   .footer-grid {
+    /* Using specialized grid--footer class */
     grid-template-columns: 2fr 1fr 1fr;
   }
 }

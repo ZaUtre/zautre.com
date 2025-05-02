@@ -1,0 +1,75 @@
+/* Zautre.com - Reusable Grid Components */
+
+/* Base Grid Container */
+.grid {
+  display: grid;
+  gap: var(--spacing-md);
+  width: 100%; /* Ensure grid is constrained to container width */
+  max-width: 100%; /* Prevent overflow */
+}
+
+/* Basic Grid Layouts with Responsive Breakpoints */
+.grid--1col {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .grid--2col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid--3col-md {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .grid--3col {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .grid--4col {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  /* Special footer grid with uneven columns */
+  .grid--footer {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+  
+  /* Half-half grid for featured content */
+  .grid--halves {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Alignment Utilities */
+.grid--center-items {
+  align-items: center;
+}
+
+.grid--gap-lg {
+  gap: var(--spacing-lg);
+}
+
+.grid--gap-sm {
+  gap: var(--spacing-sm);
+}
+
+/* Special Grid for Feature Showcase */
+.grid--showcase {
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Fix for mobile responsiveness */
+@media (max-width: 767px) {
+  .grid {
+    overflow-x: hidden; /* Prevent horizontal scroll on mobile */
+  }
+  
+  .grid--3col, .grid--2col, .grid--halves {
+    grid-template-columns: 1fr; /* Stack columns on mobile */
+  }
+}
