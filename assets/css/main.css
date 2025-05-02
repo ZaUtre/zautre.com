@@ -326,6 +326,40 @@ a:hover {
   display: flex;
   justify-content: center;
   gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+/* Platform Logos in Hero */
+.platform-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.platform-logo {
+  height: 40px;
+  width: auto;
+  opacity: 0.7;
+  filter: grayscale(100%);
+  transition: var(--transition);
+}
+
+.platform-logo:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+@media (max-width: 768px) {
+  .platform-logos {
+    gap: var(--spacing-sm);
+  }
+  
+  .platform-logo {
+    height: 30px;
+  }
 }
 
 @media (max-width: 576px) {

@@ -4,12 +4,26 @@ title: Zautre - E-commerce Solutions for Tomorrow
 hero_video: hero.mp4
 ---
 
-<div class="hero-section">
-  <h1>E-commerce solutions for tomorrow</h1>
-  <p class="hero-subtitle">Specialized e-commerce solutions for retail and luxury brands</p>
-  <div class="hero-cta">
-    <a href="/services/sfcc-development" class="btn btn-primary">SFCC Development</a>
-    <a href="/contact" class="btn btn-secondary">Contact Us</a>
+<div class="hero-video-container">
+  <video autoplay muted loop playsinline poster="{{ '/assets/images/hero-poster.png' | relative_url }}">
+    <source src="{{ page.hero_video | relative_url }}" type="video/mp4">
+  </video>
+  
+  <div class="hero-overlay">
+    <div class="hero-section">
+      <h1>E-commerce solutions for tomorrow</h1>
+      <p class="hero-subtitle">Specialized e-commerce solutions for retail and luxury brands</p>
+      <div class="hero-cta">
+        <a href="/services/sfcc-development" class="btn btn-primary">SFCC Development</a>
+        <a href="/contact" class="btn btn-secondary">Contact Us</a>
+      </div>
+      <div class="platform-logos">
+        <img src="/assets/images/logo-salesforce3.webp" alt="Salesforce Commerce Cloud Logo" class="platform-logo">
+        <img src="/assets/images/magento-logo-bw.webp" alt="Magento Logo" class="platform-logo">
+        <img src="/assets/images/Shopify-Logo-bw.webp" alt="Shopify Logo" class="platform-logo">
+        <img src="/assets/images/commercetools-bw.webp" alt="Commercetools Logo" class="platform-logo">
+      </div>
+    </div>
   </div>
 </div>
 

@@ -2,18 +2,4 @@
 layout: default
 ---
 
-{% if page.hero_video %}
-<div class="hero-video-container">
-  <video autoplay muted loop playsinline poster="{{ '/assets/images/hero-poster.png' | relative_url }}">
-    <source src="{{ page.hero_video | relative_url }}" type="video/mp4">
-  </video>
-  
-  <div class="hero-overlay">
-    {{ content | split: '</div>' | first }}</div>
-  </div>
-</div>
-{% endif %}
-
-<div class="home-content">
-  {{ content | split: '</div>' | last }}
-</div>
+{{ content }}
