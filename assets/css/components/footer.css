@@ -1,0 +1,112 @@
+/* Zautre.com - Footer Styles */
+
+.site-footer {
+  background-color: var(--dark-gray);
+  color: var(--white);
+  padding: var(--spacing-xl) 0 var(--spacing-lg);
+  position: relative;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .footer-grid {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+}
+
+.footer-col h3 {
+  color: var(--white);
+  margin-bottom: var(--spacing-md);
+  font-size: 1.2rem;
+  position: relative;
+  padding-bottom: var(--spacing-xs);
+}
+
+.footer-col h3:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: var(--accent-color);
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: var(--spacing-xs);
+}
+
+.footer-col a {
+  color: rgba(255, 255, 255, 0.8);
+  transition: var(--transition);
+}
+
+.footer-col a:hover {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.social-links {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-sm);
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transition: var(--transition);
+}
+
+.social-links a:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-3px);
+}
+
+.social-links svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--white);
+}
+
+.footer-brand {
+  margin-bottom: var(--spacing-md);
+}
+
+.footer-brand img, 
+.footer-brand svg {
+  height: 30px;
+  width: auto;
+  margin-bottom: var(--spacing-sm);
+}
+
+.footer-bottom {
+  padding-top: var(--spacing-md);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+}

@@ -1,0 +1,122 @@
+/* Zautre.com - Hero Section Styles */
+
+.hero-section {
+  padding: var(--spacing-xl) 0;
+  text-align: center;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.hero-cta {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+/* Platform Logos in Hero */
+.platform-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.platform-logo {
+  height: 40px;
+  width: auto;
+  opacity: 0.7;
+  filter: grayscale(100%);
+  transition: var(--transition);
+}
+
+.platform-logo:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+@media (max-width: 768px) {
+  .platform-logos {
+    gap: var(--spacing-sm);
+  }
+  
+  .platform-logo {
+    height: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+  }
+  
+  .hero-cta .btn {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  /* Hide hero heading and subtitle on mobile */
+  .hero-section h1{
+    display: none;
+  }
+}
+
+.hero-video-container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  max-width: none;
+  overflow: hidden;
+  background-color: var(--dark-gray);
+}
+
+.hero-video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-lg);
+  background-color: rgba(0, 0, 0, 0.4);
+  color: var(--white);
+  z-index: 2;
+}
+
+.hero-overlay h1 {
+  font-size: 3.5rem;
+  margin-bottom: var(--spacing-sm);
+  color: var(--white);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-overlay .hero-subtitle {
+  color: var(--white);
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-md);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.hero-overlay .btn {
+  min-width: 180px;
+}
