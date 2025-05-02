@@ -33,16 +33,16 @@ hero_video: hero.mp4
   
   <div class="expertise-stats">
     <div class="stat">
-      <span class="number">14+</span>
-      <span class="label">Certified Experts</span>
-    </div>
-    <div class="stat">
-      <span class="number">12+</span>
-      <span class="label">SFCC Projects</span>
-    </div>
-    <div class="stat">
       <span class="number">Since 2015</span>
       <span class="label">Trusted Partner</span>
+    </div>
+    <div class="stat">
+      <span class="number">100%</span>
+      <span class="label">Certified Engineering Team</span>
+    </div>
+    <div class="stat">
+      <span class="number">100+</span>
+      <span class="label">SFCC Projects</span>
     </div>
   </div>
 </section>
