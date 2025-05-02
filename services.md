@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: page
 title: Services
 subtitle: Creating connected customer centric experiences that grow your digital business
 permalink: /services/

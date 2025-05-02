@@ -1,6 +1,5 @@
 ---
-layout: home
-title: Zautre - E-commerce Solutions for Tomorrow
+layout: page
 hero_video: hero.mp4
 ---
 
