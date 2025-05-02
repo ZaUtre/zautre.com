@@ -1,0 +1,218 @@
+/* Zautre.com - Careers Page Styles */
+
+/* Careers Header Section */
+.careers-header {
+  text-align: center;
+  padding: var(--spacing-xl) 0;
+}
+
+.careers-header h1 {
+  margin-bottom: var(--spacing-xs);
+}
+
+/* Careers Intro Section */
+.careers-intro {
+  padding: 0;
+  text-align: left;
+  max-width: 800px;
+  margin: var(--spacing-xl) auto var(--spacing-xl);
+}
+
+.careers-intro .lead {
+  font-size: 1.2rem;
+  color: var(--medium-gray);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Careers Sections */
+.careers-section {
+  margin-bottom: var(--spacing-xl);
+  padding: 0;
+  clear: both;
+}
+
+.careers-section h2 {
+  margin-bottom: var(--spacing-md);
+  color: var(--primary-color);
+  font-size: 1.8rem;
+}
+
+/* Two-column layout */
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-xl);
+  align-items: center;
+  margin-top: var(--spacing-lg);
+}
+
+@media (min-width: 768px) {
+  .two-column {
+    grid-template-columns: 3fr 2fr;
+  }
+}
+
+.careers-image {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+}
+
+.careers-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Card Grids */
+.benefits-grid,
+.roles-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin-top: var(--spacing-md);
+}
+
+@media (min-width: 768px) {
+  .benefits-grid,
+  .roles-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .benefits-grid,
+  .roles-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Benefit Card Styles - Using existing card component */
+.benefit-card {
+  margin-bottom: 0;
+}
+
+.benefit-card h3 {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Role Card Styles */
+.role-card {
+  background-color: var(--light-gray);
+  margin-bottom: 0;
+}
+
+.role-card h3 {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Job Listings Section */
+.job-listings {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin-top: var(--spacing-md);
+}
+
+@media (min-width: 992px) {
+  .job-listings {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.job-card {
+  margin-bottom: 0;
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+.job-header h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: var(--primary-color);
+}
+
+.job-type {
+  background-color: var(--accent-color-light);
+  color: var(--accent-color);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.job-details {
+  margin-bottom: var(--spacing-md);
+  flex-grow: 1;
+}
+
+.job-details p {
+  margin-bottom: var(--spacing-sm);
+}
+
+.job-requirements {
+  margin-top: var(--spacing-sm);
+  padding-left: 20px;
+  margin-bottom: var(--spacing-md);
+}
+
+.job-requirements li {
+  margin-bottom: 5px;
+}
+
+/* No openings message */
+.no-openings {
+  background-color: var(--light-gray);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+  text-align: center;
+  margin-top: var(--spacing-md);
+}
+
+/* CTA Section */
+.cta-section {
+  background-color: var(--primary-color);
+  color: var(--white);
+  text-align: center;
+  padding: var(--spacing-xl) 0;
+  margin-top: var(--spacing-xl);
+  margin-bottom: 0;
+}
+
+.cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.cta-content h2 {
+  color: var(--white) !important;
+  margin-bottom: var(--spacing-sm);
+}
+
+.cta-content p {
+  color: var(--white);
+  margin-bottom: var(--spacing-md);
+}
+
+.cta-content .btn {
+  background-color: var(--white);
+  color: var(--primary-color);
+  border: none;
+}
+
+.cta-content .btn:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+}
