@@ -47,7 +47,7 @@ permalink: /contact/
             <textarea name="message" id="message" rows="6" required></textarea>
           </div>
           <div class="form-group">
-            <div class="g-recaptcha" data-sitekey="your-recaptcha-site-key"></div>
+            <div class="g-recaptcha" data-sitekey="6Lf44y0rAAAAAII3xboOsDq6cbfICiEiU80EqyaK"></div>
           </div>
           <div class="form-actions">
             <button type="submit" class="btn btn-primary">Send Message</button>
