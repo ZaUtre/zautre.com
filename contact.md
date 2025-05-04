@@ -75,13 +75,11 @@ permalink: /contact/
           <div class="social-links">
             <a href="https://github.com/zautre" target="_blank" rel="noopener" aria-label="GitHub">
               <img src="https://cdn.simpleicons.org/github/24292f" alt="GitHub" class="icon" width="24" height="24" />
-              GitHub
+              
             </a>
             <a href="https://www.linkedin.com/company/zautre" target="_blank" rel="noopener" aria-label="LinkedIn">
-              <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="#0A66C2" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20.447 20.452h-3.554v-5.569c0-1.327-.025-3.037-1.849-3.037-1.851 0-2.132 1.445-2.132 2.939v5.667H9.358V9h3.414v1.561h.049c.476-.899 1.637-1.849 3.37-1.849 3.602 0 4.267 2.368 4.267 5.455v6.285zM5.337 7.433c-1.144 0-2.069-.926-2.069-2.068 0-1.143.925-2.069 2.069-2.069 1.143 0 2.068.926 2.068 2.069 0 1.142-.925 2.068-2.068 2.068zm1.777 13.019H3.56V9h3.554v11.452zM22.225 0H1.771C.792 0 0 .771 0 1.723v20.549C0 23.229.792 24 1.771 24h20.451C23.2 24 24 23.229 24 22.271V1.723C24 .771 23.2 0 22.222 0z"/>
-              </svg>
-              LinkedIn
+              <img src="/assets/images/linkedin-svgrepo-com.svg" alt="LinkedIn" class="icon" width="24" height="24" style="filter: grayscale(100%) brightness(0);" />
+              
             </a>
           </div>
         </div>

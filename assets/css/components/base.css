@@ -92,3 +92,50 @@ a:hover {
   padding: 1rem 2rem;
   font-size: 1.1rem;
 }
+
+/* Contact Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 1.5rem 1rem;
+}
+.contact-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.contact-form label {
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  color: var(--primary-color, #0056b3);
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #fafbfc;
+  transition: border-color 0.2s;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--primary-color, #0056b3);
+  outline: none;
+  background: #fff;
+}
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+.contact-form .form-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+.contact-form .btn {
+  min-width: 160px;
+}
+.contact-form .g-recaptcha {
+  margin-top: 0.5rem;
+}
