@@ -36,7 +36,3 @@
     grid-template-columns: 1fr 1fr;
   }
 }
-
-/* Project info styles now use .card and .card--project from cards.css */
-
-/* Project image styles now use .card--image from cards.css */
