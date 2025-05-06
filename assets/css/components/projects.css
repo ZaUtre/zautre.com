@@ -82,110 +82,32 @@
   background-color: #f9f9f9;
 }
 
-/* Project listing grid styles */
-.projects-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--spacing-md);
-  margin-top: var(--spacing-lg);
+/* Project listing page specific styles */
+.projects-intro {
+  margin-bottom: var(--spacing-lg);
 }
 
-@media (min-width: 768px) {
-  .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* Project card styles for the main projects page */
-.project-card {
-  border-radius: var(--border-radius);
-  overflow: hidden;
-  box-shadow: var(--box-shadow);
-  background-color: var(--white);
-  transition: var(--transition);
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-}
-
-.project-card__image {
-  height: 0;
-  padding-bottom: 100%; /* Makes it square */
-  overflow: hidden;
-  position: relative;
-  max-height: 200px;
-}
-
-.project-card__image img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  transition: var(--transition);
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.project-card:hover .project-card__image img {
-  transform: scale(1.05);
-}
-
-.project-card__content {
-  padding: var(--spacing-md);
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.project-card__title {
-  font-size: 1.4rem;
-  margin-bottom: var(--spacing-xs);
-  color: var(--dark-gray);
-  font-weight: 600;
-}
-
-.project-card__description {
+.projects-intro .lead {
+  font-size: 1.2rem;
+  line-height: 1.6;
   color: var(--medium-gray);
-  margin-bottom: var(--spacing-md);
-  flex-grow: 1;
 }
 
-.project-card__link {
-  display: inline-block;
-  color: var(--secondary-color);
-  font-weight: 600;
-  text-decoration: none;
-  position: relative;
-  padding-bottom: 2px;
+.projects-filters {
+  margin-bottom: var(--spacing-lg);
 }
 
-.project-card__link:after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: var(--secondary-color);
-  transition: var(--transition);
-}
-
-.project-card__link:hover:after {
-  width: 100%;
-}
-
-/* Project filter styles */
-.project-filters {
+.filter-group {
   display: flex;
   flex-wrap: wrap;
   gap: var(--spacing-xs);
-  margin-bottom: var(--spacing-lg);
+  align-items: center;
+}
+
+.filter-group label {
+  font-weight: 600;
+  color: var(--dark-gray);
+  margin-right: var(--spacing-xs);
 }
 
 .filter-btn {
@@ -208,6 +130,98 @@
   color: var(--white);
 }
 
+/* Projects grid with the correct class names from projects.md */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+}
+
+@media (min-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.project-card {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  background-color: var(--white);
+  transition: var(--transition);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Project image with the correct class name */
+.project-image {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  background-color: #f9f9f9;
+}
+
+.project-image img {
+  object-fit: contain;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  transition: var(--transition);
+}
+
+/* Project info with the correct class name */
+.project-info {
+  padding: var(--spacing-md);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-info h3 {
+  font-size: 1.4rem;
+  margin-bottom: var(--spacing-xs);
+  color: var(--dark-gray);
+  font-weight: 600;
+}
+
+.project-info .client {
+  color: var(--medium-gray);
+  font-weight: 500;
+  margin-bottom: var(--spacing-sm);
+}
+
+.project-info p {
+  margin-bottom: var(--spacing-md);
+  color: var(--medium-gray);
+  flex-grow: 1;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-sm);
+}
+
+.tag {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background-color: rgba(0, 160, 210, 0.1);
+  color: var(--secondary-color);
+  border-radius: var(--border-radius);
+  font-size: 0.9rem;
+}
+
+/* Keep other styles intact */
 .project-main {
   max-width: 800px;
   margin: 0 auto;
