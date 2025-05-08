@@ -26,37 +26,36 @@ permalink: /services/
       <div class="card card--service">
         <h3>Architecture</h3>
         <p>Our architecture team has broad expertise across all systems involved in the ecommerce process; from Commerce Cloud B2C platform itself to OMS and ERP as well as any third party partners that integrate with e-commerce websites.</p>
-        <a href="{{ '/services/architecture' | relative_url }}" class="read-more">Learn More</a>
       </div>
       
       <div class="card card--service">
         <h3>Development</h3>
         <p>We employ only certified Salesforce Commerce Cloud developers which are experts on the technical aspects of the platform. All of us are based in Bulgaria and working in the CEE time-zone, but we are used to collaborating with US and Australia based teams.</p>
-        <a href="{{ '/services/sfcc-development' | relative_url }}" class="read-more">Learn More</a>
+        
       </div>
       
       <div class="card card--service">
         <h3>Project Management</h3>
         <p>Our project managers are technically competent with a clear view on the project and provide guidance and direction to keep our teams on track and within the budget. We practice exclusively Agile project management techniques.</p>
-        <a href="{{ '/services/project-management' | relative_url }}" class="read-more">Learn More</a>
+        
       </div>
       
       <div class="card card--service">
         <h3>Quality Assurance</h3>
         <p>Our quality engineers specialize in testing e-commerce solutions. They would ensure that the features and functionality adhere to the highest standards in the industry and meet our clients' needs. Solutions are tested across all relevant browsers and devices.</p>
-        <a href="{{ '/services/quality-assurance' | relative_url }}" class="read-more">Learn More</a>
+        
       </div>
       
       <div class="card card--service">
         <h3>Analysis</h3>
         <p>We can provide services enabling our clients to optimise their investment in digital commerce by identifying opportunities to drive higher conversion, efficiency and overall create better experiences.</p>
-        <a href="{{ '/services/analysis' | relative_url }}" class="read-more">Learn More</a>
+        
       </div>
       
       <div class="card card--service">
         <h3>Consulting</h3>
         <p>We are in the ecommerce development business because we love challenges. We do like solving problems and the bigger the challenge the better we work. You can rely on our consulting services to shed light on even the most complex business needs.</p>
-        <a href="{{ '/services/consulting' | relative_url }}" class="read-more">Learn More</a>
+        
       </div>
     </div>
   </div>
