@@ -68,9 +68,29 @@
 @media (max-width: 767px) {
   .grid {
     overflow-x: hidden; /* Prevent horizontal scroll on mobile */
+    gap: var(--spacing-md); /* Smaller gap on mobile */
   }
   
-  .grid--3col, .grid--2col, .grid--halves {
+  .grid--3col, .grid--2col, .grid--halves, .grid--3col-md {
     grid-template-columns: 1fr; /* Stack columns on mobile */
+  }
+
+  .grid--showcase {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .grid--showcase .card--project {
+    margin-bottom: var(--spacing-md);
+  }
+
+  /* Ensure all grid children have proper spacing */
+  .grid > * {
+    margin-bottom: 0; /* Remove the default margin we added */
+  }
+  
+  /* Improve padding and margins for grid items */
+  .grid--halves > * {
+    padding: var(--spacing-sm);
   }
 }

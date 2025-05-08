@@ -142,3 +142,62 @@
   color: var(--medium-gray);
   font-size: 1rem;
 }
+
+/* Mobile-specific card styling */
+@media (max-width: 767px) {
+  .card {
+    padding: var(--spacing-sm);
+  }
+  
+  .card--service {
+    padding: var(--spacing-md);
+    font-size: 0.9rem;
+    overflow: hidden; /* Prevent content from spilling out */
+  }
+  
+  .card--service h3 {
+    font-size: 1.3rem;
+    margin-bottom: var(--spacing-xs);
+  }
+  
+  .card--service p {
+    margin-bottom: var(--spacing-sm);
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  
+  .card--service ul {
+    padding-left: var(--spacing-md);
+    font-size: 0.9rem;
+  }
+  
+  .card--service li {
+    margin-bottom: var(--spacing-xs);
+  }
+  
+  /* Project card mobile styling */
+  .card--project {
+    padding: var(--spacing-sm);
+  }
+  
+  .card--project h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-xs);
+  }
+  
+  /* Expertise stats mobile styling */
+  .stat {
+    min-height: 90px;
+    padding: var(--spacing-sm);
+  }
+  
+  .stat .number {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-xs);
+  }
+  
+  .stat .label {
+    font-size: 0.9rem;
+    line-height: 1.3;
+  }
+}

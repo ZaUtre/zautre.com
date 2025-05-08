@@ -138,4 +138,28 @@
   }
 }
 
+/* Improved mobile responsiveness */
+@media (max-width: 767px) {
+  .services-cards-section .container {
+    padding: 0 var(--spacing-sm); /* Reduced side padding on mobile */
+  }
+  
+  .services-grid {
+    gap: var(--spacing-md); /* Smaller gap on mobile */
+  }
+  
+  .services-header h1 {
+    font-size: 2rem; /* Smaller header font on mobile */
+  }
+  
+  .services-header .subtitle {
+    font-size: 1.1rem; /* Smaller subtitle on mobile */
+  }
+  
+  .services-overview .lead {
+    font-size: 1.1rem; /* Smaller lead text on mobile */
+    padding: 0 var(--spacing-sm);
+  }
+}
+
 /* Service card styles moved to cards.css as .card and .card--service */

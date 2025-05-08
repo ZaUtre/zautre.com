@@ -47,3 +47,31 @@
   display: block;
   margin-top: var(--spacing-sm);
 }
+
+/* Mobile responsive styles */
+@media screen and (max-width: 767px) {
+  .testimonial blockquote {
+    font-size: 0.95rem; /* Even smaller font for testimonial text on mobile */
+    line-height: 1.4;
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .testimonial::before {
+    font-size: 4rem; /* Smaller quote mark on mobile */
+    top: -20px;
+    left: 10px;
+  }
+  
+  .testimonial cite {
+    font-size: 0.8rem; /* Smaller citation font on mobile */
+  }
+  
+  .testimonial {
+    padding: var(--spacing-sm); /* Even less padding on mobile */
+    margin-top: var(--spacing-md);
+  }
+  
+  .testimonial-section h2 {
+    font-size: 1.8rem; /* Smaller section heading on mobile */
+  }
+}
