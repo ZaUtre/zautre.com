@@ -91,6 +91,46 @@ The implementation of the new digital commerce platform delivered significant bu
 - **25% Reduction in Return Rate**: Virtual try-on technology helped customers make more confident purchasing decisions
 - **4.8/5 Customer Satisfaction**: Post-purchase surveys showed extremely positive feedback about the new digital experience
 
+## Technical Architecture & Migration
+
+### Salesforce Commerce Cloud Implementation
+
+A critical component of our solution for Multiopticas was the strategic migration from SiteGenesis to Salesforce Commerce Cloud's Storefront Reference Architecture (SFRA). This migration represented a significant technical undertaking designed to reduce complexity while enabling greater scalability.
+
+Key aspects of our technical approach included:
+
+- **Phased Market Rollout**: We implemented a phased deployment strategy, first launching a comprehensive MVP for the Spanish market—Multiopticas' primary market—followed by a simplified international version to support their global expansion goals.
+
+- **Architecture Optimization**: Rather than simply replicating the existing implementation, we conducted a thorough analysis to identify opportunities for optimization, resulting in a more Commerce Cloud-centric architecture that leverages native platform capabilities.
+
+- **Design Standardization**: Working closely with design partners, we aligned the custom user interface with SFRA best practices to maximize efficiency without compromising the brand experience.
+
+### Advanced Integrations
+
+The platform incorporates several sophisticated integrations that enhance the customer experience:
+
+- **Payment Processing**: Consolidated payment solutions through Adyen, supporting multiple payment methods including regional options like Bizum in Spain.
+
+- **Recurring Purchases**: Implemented Order Group integration to enable subscription-based services for contact lenses and other recurring eyewear needs.
+
+- **Virtual Try-On**: Integrated Fitting Box technology that allows customers to visualize frames on their own faces through a sophisticated 3D modeling system.
+
+- **Omnichannel Operations**: Connected physical store systems (MS) to enable in-store returns for online purchases and allow store staff to access customer prescriptions for seamless service.
+
+- **Prescription Processing**: Developed automated workflows for prescription glasses orders, connecting with external fabricators like Cooper Vision through secure SFTP channels.
+
+- **Marketing Automation**: Integrated with Salesforce Marketing Cloud to power personalized email communications, customer journeys, and promotional campaigns.
+
+### Development Process
+
+Our development approach prioritized quality and efficiency:
+
+- **Comprehensive Requirements Analysis**: Developed a detailed Business Requirements Document with approximately 200 items covering all functional areas.
+
+- **Component-Based Architecture**: Created reusable components for Page Designer, enabling marketing teams to configure and modify content without developer intervention.
+
+- **Rigorous QA Process**: Established thorough regression testing protocols focused on critical functionalities like appointment scheduling, prescription management, and payment processing.
+
 ## Looking Forward
 
 Following the successful platform launch, Zautre continues to partner with Multiopticas on further enhancements, including expanding their virtual try-on capabilities to include lens options and implementing AR features to visualize different lens treatments. We're also developing advanced analytics dashboards to provide deeper insights into customer preferences and behavior patterns.
