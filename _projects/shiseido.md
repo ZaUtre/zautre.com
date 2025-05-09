@@ -4,23 +4,19 @@ title: Shiseido Corp. - Global E-commerce Architectural Support & Composable Str
 subtitle: Providing long-term architectural guidance and designing a future-ready composable storefront solution for a global cosmetics leader.
 permalink: /projects/shiseido/
 featured: false
-image: /assets/images/projects/shiseido.png # You'll need an image
+image: /assets/images/projects/shiseido.png
 client: Shiseido Corporation
 industry: Cosmetics & Beauty
 challenge: Shiseido required ongoing high-level architectural support for their global core e-commerce codebase and needed a forward-thinking strategy to evolve their digital presence towards a more flexible, composable architecture to meet future business goals.
 solution: In partnership with Merkle, ZaUtre provided Shiseido Corp. with over 4 years of architectural support for their core codebase. ZaUtre architects also designed a composable storefront solution to replace the bulk architecture, aligning with Shiseido's 2030 global business vision.
 results: Provided stable architectural support for numerous global sites and delivered a strategic design for a next-generation composable storefront, enabling Shiseido to pursue their long-term digital transformation goals.
-testimonial: "" # Add if available
-testimonial_author: "" # Add if available
-testimonial_position: "" # Add if available
 services:
   - E-commerce Architecture Consulting
   - Composable Commerce Strategy
   - Technical Design & Global Platform Support
 technologies:
-  - (Existing E-commerce Platform Technologies)
+  - SFCC
   - Composable Commerce Principles
-  - (Specifics of the composable solution if known)
 categories:
   - e-commerce
   - enterprise-architecture

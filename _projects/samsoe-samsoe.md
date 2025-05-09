@@ -1,97 +1,78 @@
 ---
 layout: project
 title: Samsoe Samsoe E-commerce Platform
-subtitle: SFCC Implementation for Global Fashion Brand
+subtitle: SFCC Maintenance & Enhancement
 permalink: /projects/samsoe-samsoe/
 featured: true
-image: /assets/images/projects/samsoe-samsoe-hero.jpg
+image: /assets/images/projects/samsoe-samsoe.png
 client: Samsoe Samsoe
 industry: Fashion Retail
-challenge: Samsoe Samsoe needed a robust, scalable e-commerce platform to support their international expansion while delivering a premium shopping experience that reflected their Scandinavian design aesthetic.
-solution: We implemented a custom Salesforce Commerce Cloud solution with Adyen payment integration, enhanced OMS data flows, and Google reCAPTCHA for security, creating a seamless online shopping experience for their global customers.
-results: The new platform delivered a 35% increase in conversion rate, 28% growth in average order value, and supported successful expansion into five new international markets.
-testimonial: Zautre's technical knowledge was impressive. They showed great understanding of our business requirements and delivered a solution that exceeded our expectations.
-testimonial_author: E-commerce Manager
+challenge: Samsoe Samsoe needed a reliable partner to take over their SFCC platform maintenance from their previous integrator with minimal disruption to their global operations.
+solution: We executed a seamless transition to full site maintenance within just one month and continued adding valuable new features including inriver PIM integration.
+results: We achieved zero downtime during the maintenance transition and subsequently improved platform performance and convertion rate
+testimonial: Zautre's seamless takeover of our platform maintenance in just one month was impressive. Their continuous enhancements and reliable support have made them a trusted technology partner.
+testimonial_author: Javier Artal
 testimonial_position: Samsoe Samsoe
 services:
-  - SFCC Development
-  - Adyen Payment Integration
+  - SFCC Managed Services
+  - inriver PIM Integration
+  - Adyen Payment Enhancement
   - OMS Enhancement
   - Security Implementation
 technologies:
   - Salesforce Commerce Cloud
   - SFRA
   - Adyen
-  - Google reCAPTCHA
+  - inriver PIM
   - REST APIs
 categories:
   - sfcc
   - integrations
+  - maintenance
 ---
 
 ## Project Overview
 
-Samsoe Samsoe, a renowned international fashion brand known for their contemporary Scandinavian designs, partnered with Zautre to transform their digital commerce experience. The brand needed a robust e-commerce solution that could support their global growth ambitions while delivering an exceptional customer experience aligned with their premium brand positioning.
+Samsoe Samsoe, a renowned international fashion brand known for their contemporary Scandinavian designs, partnered with Zautre to take over the maintenance and enhancement of their existing Salesforce Commerce Cloud platform. What began as a maintenance transition quickly evolved into a trusted long-term technology partnership.
 
-## The Challenge in Detail
+## The Challenge
 
-Samsoe Samsoe faced several challenges with their existing e-commerce infrastructure:
+Samsoe Samsoe faced several critical challenges:
 
-- **International Expansion Limitations**: Their previous platform struggled to support multi-currency, multi-language, and region-specific requirements necessary for global expansion.
-- **Performance Issues**: Site speed and stability were concerns, particularly during high-traffic sales periods.
-- **Limited Payment Options**: The existing payment solution didn't support the diverse payment methods preferred in different international markets.
-- **Order Management Complexity**: Manual processes were required to reconcile order data across systems, leading to inefficiencies.
-- **Evolving Security Requirements**: The platform needed enhanced protection against increasing bot attacks and fraudulent activities.
+- **Maintenance Transition Risk**: They needed to switch from their previous integrator with zero disruption to business operations
+- **Platform Performance Issues**: The existing implementation had speed and stability concerns, particularly during high-traffic periods
+- **Product Information Management**: Inefficient PIM processes were slowing down time-to-market for new products
+- **International Expansion Support**: Their growing global presence required enhanced multi-currency and multi-language capabilities
 
-## Our Technical Solution
+## Our Solution
 
-### SFCC Platform Implementation
+### Seamless Maintenance Transition
 
-We designed and implemented a comprehensive Salesforce Commerce Cloud solution tailored specifically for Samsoe Samsoe's requirements:
+We executed a smooth transition to become Samsoe Samsoe's dedicated SFCC maintenance partner:
 
-- **Custom SFRA Development**: Built on Salesforce's Reference Architecture with customizations to align with the brand's specific needs
-- **Multi-site Management**: Created a streamlined approach for managing multiple international storefronts from a single admin interface
-- **Responsive Design Implementation**: Ensured a consistent, premium shopping experience across all devices
-- **Performance Optimization**: Implemented caching strategies, image optimization, and code efficiency improvements for fast page loads
+- **Rapid Knowledge Acquisition**: Completed comprehensive platform knowledge transfer in just 4 weeks
+- **Zero-Downtime Transition**: Maintained 100% platform availability throughout the transition period
+- **Process Improvement**: Implemented enhanced development, testing, and deployment workflows
+- **Documentation Development**: Created robust technical documentation in parallel with the transition
 
-### Adyen Payment Integration
+### inriver PIM Integration
 
-To support Samsoe Samsoe's international growth, we implemented a sophisticated Adyen payment solution:
+After successfully taking over maintenance, we implemented a sophisticated product information management solution:
 
-- **Multi-currency Support**: Enabled seamless transactions in multiple currencies
-- **Localized Payment Methods**: Integrated region-specific payment options to improve conversion in different markets
-- **Tokenization**: Implemented secure card storage for returning customers, enhancing the checkout experience
-- **Fraud Prevention**: Configured Adyen's risk management tools to protect the business while minimizing false declines
+- **Centralized Product Data**: Created a single source of truth for all product information across markets
+- **Automated Content Workflows**: Streamlined product enrichment and publishing processes
+- **Advanced Digital Asset Management**: Enabled efficient handling of product images and media
+- **Localization Support**: Facilitated easy management of multi-language product information
 
-### OMS Data Flow Enhancement
+### Continuous Platform Enhancement
 
-We improved the Order Management System data flows to increase efficiency and visibility:
+We continuously improved the existing platform with new features and optimizations:
 
-- **Real-time Synchronization**: Developed custom APIs to ensure order data flowed seamlessly between systems
-- **Automated Reconciliation**: Eliminated manual processes through automated data matching and validation
-- **Enhanced Reporting**: Created comprehensive dashboards for better visibility into order status and fulfillment metrics
-- **Exception Handling**: Implemented robust processes to identify and resolve data discrepancies automatically
+- **Payment System Enhancement**: Refined the Adyen integration for better localized payment support
+- **Performance Optimization**: Implemented advanced caching and code efficiency improvements
+- **Enhanced Security**: Deployed reCAPTCHA, data encryption, and PSD2-compliant checkout flows
+- **OMS Data Flow Refinement**: Streamlined order management processes for operational efficiency
 
-### Security Implementation
+## Partnership Evolution
 
-To protect customer data and prevent fraud, we implemented several security measures:
-
-- **Google reCAPTCHA Integration**: Deployed advanced bot protection while maintaining a seamless user experience
-- **Data Encryption**: Implemented end-to-end encryption for sensitive customer information
-- **Secure Checkout Flow**: Designed a checkout process compliant with PSD2 requirements including Strong Customer Authentication (SCA)
-- **Regular Security Audits**: Established a protocol for ongoing security assessment and updates
-
-## Results & Impact
-
-The implementation of the new SFCC platform had significant positive impacts on Samsoe Samsoe's business:
-
-- **35% Increase in Conversion Rate**: The improved user experience and localized payment options drove substantial conversion improvements
-- **28% Growth in Average Order Value**: Enhanced product discovery and streamlined checkout helped increase basket sizes
-- **Successful Market Expansion**: The platform supported successful launches in five new international markets
-- **60% Reduction in Order Processing Time**: Improved OMS data flows dramatically increased operational efficiency
-- **99.9% Uptime**: Even during major sale events, the platform maintained exceptional stability
-- **90% Decrease in Fraud-related Issues**: The security measures effectively protected against fraudulent activities while minimizing impacts on legitimate customers
-
-## Looking Forward
-
-Following the successful implementation, Zautre continues to partner with Samsoe Samsoe, providing ongoing optimization and new feature development to support their evolving e-commerce strategy. Current initiatives include enhancing personalization capabilities and implementing conversational commerce solutions to further elevate the customer experience.
+What began as a maintenance transition has evolved into a long-term partnership. Zautre now provides continuous optimization and feature development for Samsoe Samsoe, with current initiatives focused on personalization capabilities and implementing conversational commerce solutions to further enhance their customer experience.

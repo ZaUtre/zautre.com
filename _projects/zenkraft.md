@@ -4,15 +4,15 @@ title: Zenkraft (Bringg) - Integration Cartridge Support
 subtitle: Upgrading, Maintaining, and Supporting a Salesforce Native Shipping Solution
 permalink: /projects/zenkraft-bringg/
 featured: false
-image: /assets/images/projects/zenkraft-bringg.png # You'll need an image
+image: /assets/images/projects/zankraft.png
 client: Zenkraft, a Bringg Solution
 industry: Logistics & E-commerce Solutions
 challenge: Zenkraft required ongoing support for their Salesforce integration cartridge, including upgrades and maintenance, to ensure its continued functionality and compatibility for users.
 solution: ZaUtre provided integration cartridge upgrade, maintenance, and support for Zenkraft's multi-carrier shipping, same-day delivery, and returns solution on Salesforce.
 results: Ensured the reliability and up-to-date functionality of the Zenkraft (Bringg) integration cartridge for Salesforce users.
-testimonial: "" # Add if available
-testimonial_author: "" # Add if available
-testimonial_position: "" # Add if available
+testimonial: "ZaUtre has been an invaluable partner for our SFCC cartridge maintenance. Their technical expertise and responsiveness have ensured our integration remains robust and up-to-date over the years. They've consistently delivered high-quality support that our customers rely on."
+testimonial_author: "Viv Austin" 
+testimonial_position: "Director of Technology" 
 services:
   - Salesforce Cartridge Development
   - Maintenance & Support

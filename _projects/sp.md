@@ -3,21 +3,18 @@ layout: project
 title: Sweet Protection - Enhanced E-commerce Experience
 subtitle: Customizing Page Designer for a Leading Sports Gear Brand
 permalink: /projects/sweet-protection/
-featured: false # Or true, if desired
-image: /assets/images/projects/sweet-protection.png # You'll need an image
+featured: false
+image: /assets/images/projects/sweet-protection.png
 client: Sweet Protection
 industry: Sports Gear & Apparel
 challenge: Sweet Protection needed to empower their content team with more flexibility and control over their e-commerce site's pages using their legacy architecture.
 solution: ZaUtre customized Salesforce Page Designer to unlock its potential on Sweet's legacy architecture, enabling the content team to use a visual editor to design, schedule, and publish custom pages.
 results: Enabled the content team to visually manage and publish storefront pages, improving content agility and user experience.
-testimonial: "" # Add if available
-testimonial_author: "" # Add if available
-testimonial_position: "" # Add if available
 services:
   - Salesforce Page Designer Customization
   - E-commerce Platform Enhancement
 technologies:
-  - Salesforce Commerce Cloud (Legacy Architecture)
+  - Salesforce Commerce Cloud
   - Page Designer
 categories:
   - e-commerce

@@ -10,9 +10,6 @@ industry: Sportswear
 challenge: Dæhlie needed to implement a robust automated testing framework, often considered too complex or expensive for smaller sites, to ensure the quality and reliability of their e-commerce platform.
 solution: ZaUtre built and optimized an automation testing framework, providing extensive frontend test coverage for the Dæhlie website.
 results: Successfully implemented an automated testing framework, improving software quality and reducing manual testing efforts for most of the frontend.
-testimonial: "" # Add if available
-testimonial_author: "" # Add if available
-testimonial_position: "" # Add if available
 services:
   - Automated Testing Framework Development
   - Quality Assurance Optimization

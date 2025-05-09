@@ -1,18 +1,15 @@
 ---
 layout: project
-title: EDITED - B2C Commerce Cartridge Support
+title: EDITED - B2C Commerce Cartridge Certification
 subtitle: Maintaining and Enhancing a Retail Analytics & Insights Overlay for E-commerce Sites
 permalink: /projects/edited-cartridge/
 featured: false
-image: /assets/images/projects/edited.png # You'll need an image
+image: /assets/images/projects/edited.png
 client: EDITED (Stylescape Limited)
 industry: Retail Analytics & E-commerce Technology
 challenge: EDITED required ongoing support, upgrades, and maintenance for their B2C Commerce cartridge to ensure it seamlessly delivered key product metrics and insights directly onto their clients' e-commerce sites.
 solution: ZaUtre provided integration cartridge upgrade, maintenance, and support for EDITED's B2C Commerce cartridge, which overlays retail analytics directly onto e-commerce sites or vendor consoles.
 results: Ensured the continued performance, compatibility, and reliability of the EDITED Overlay cartridge, enabling retailers to optimize page sorts, product performance, and identify conversion drivers.
-testimonial: "" # Add if available
-testimonial_author: "" # Add if available
-testimonial_position: "" # Add if available
 services:
   - Salesforce B2C Commerce Cartridge Development
   - Cartridge Maintenance & Support

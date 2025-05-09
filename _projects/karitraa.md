@@ -4,15 +4,12 @@ title: Kari Traa - ADA Compliance and Feature Enhancements
 subtitle: Improving Accessibility and User Experience for an International Sportswear Brand
 permalink: /projects/kari-traa/
 featured: false
-image: /assets/images/projects/kari-traa.png # You'll need an image
+image: /assets/images/projects/kari-traa.png
 client: Kari Traa
 industry: Sportswear
 challenge: Kari Traa needed to ensure their US site met AA ADA compliance standards and sought to implement several new features to enhance the customer experience.
 solution: ZaUtre achieved AA ADA compliance for the US site and implemented multiple features including stock notifications, email verification services, Google autocomplete, and Yotpo ratings and reviews.
 results: Achieved AA ADA compliance, enhancing accessibility, and improved user engagement through new site features.
-testimonial: ""
-testimonial_author: ""
-testimonial_position: ""
 services:
   - ADA Compliance Implementation
   - E-commerce Feature Development
