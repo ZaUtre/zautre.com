@@ -30,6 +30,7 @@ categories:
   - e-commerce
   - retail-solutions
   - sfcc
+  - SFCC Development
 ---
 
 ## Project Overview

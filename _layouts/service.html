@@ -2,20 +2,19 @@
 layout: default
 ---
 
-<div class="service-header section section--gradient">
   <div class="container">
-    <div class="section-header">
-      <h1>{{ page.title }}</h1>
-      {% if page.subtitle %}
-      <p class="subtitle">{{ page.subtitle }}</p>
-      {% endif %}
+    <div class="service-header section section--gradient">
+      <div class="container">
+        <div class="section-header">
+          <h1>{{ page.title }}</h1>
+          {% if page.subtitle %}
+          <p class="subtitle">{{ page.subtitle }}</p>
+          {% endif %}
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
-<div class="service-content section section--white">
-  <div class="container">
-    <div class="service-grid grid grid--2col">
+    <div class="service-grid grid grid--1col">
       <div class="service-main">
         {{ content }}
         
@@ -50,20 +49,6 @@ layout: default
           </div>
         </div>
         {% endif %}
-        
-        {% if page.related_services %}
-        <div class="related-services card">
-          <h3>Related Services</h3>
-          <ul>
-            {% for service_id in page.related_services %}
-              {% assign related = site.services | where: "id", service_id | first %}
-              {% if related %}
-              <li><a href="{{ related.url | relative_url }}">{{ related.title }}</a></li>
-              {% endif %}
-            {% endfor %}
-          </ul>
-        </div>
-        {% endif %}
       </div>
     </div>
   </div>
@@ -95,5 +80,5 @@ layout: default
       {% endfor %}
     </div>
   </div>
-</div>
+
 {% endif %}

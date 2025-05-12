@@ -26,7 +26,7 @@ cta_title: Ready to elevate your e-commerce with SFCC?
 cta_text: Our experts are ready to help you implement, optimize, or enhance your Salesforce Commerce Cloud solution.
 cta_button: Request SFCC Consultation
 featured_projects:
-  - samsoe-samsoe
+  - multiopticas
 ---
 
 ## Expert Salesforce Commerce Cloud Development
