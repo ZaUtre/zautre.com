@@ -30,14 +30,16 @@
 .platform-logo {
   height: 40px;
   width: auto;
-  opacity: 0.7;
+  opacity: 0.9;
   filter: grayscale(100%);
   transition: var(--transition);
 }
 
 .platform-logo:hover {
   opacity: 1;
-  filter: grayscale(0%);
+  filter: grayscale(0%) sepia(50%) hue-rotate(190deg) saturate(300%);
+  transform: scale(1.2);
+  color: var(--secondary-color);
 }
 
 @media (max-width: 768px) {
@@ -119,4 +121,5 @@
 
 .hero-overlay .btn {
   min-width: 180px;
+  color: var(--secondary-color)
 }
