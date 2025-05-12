@@ -26,6 +26,29 @@ hero_video: hero.mp4
   </div>
 </div>
 
+<section class="featured-project section section--with-decoration section--light">
+  <div class="container">
+    <div class="section-header">
+      <h2>Featured Project</h2>
+    </div>
+    {% assign featured_project = site.projects | where: "featured", true | first %}
+    {% if featured_project %}
+      <div class="project-showcase grid grid--halves grid--showcase">
+        <div class="card card--project">
+          <h3>{{ featured_project.title }}</h3>
+          <p>{{ featured_project.solution }}</p>
+          <a href="{{ featured_project.url }}" class="btn">View Project Details</a>
+        </div>
+        {% if featured_project.image %}
+          <div class="card--image">
+            <img src="{{ featured_project.image }}" alt="{{ featured_project.title }}">
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+</section>
+
 <section class="expertise-section section section--white">
   <div class="container">
     <div class="section-header">
@@ -64,29 +87,6 @@ hero_video: hero.mp4
         </div>
       {% endfor %}
     </div>
-  </div>
-</section>
-
-<section class="featured-project section section--with-decoration section--light">
-  <div class="container">
-    <div class="section-header">
-      <h2>Featured Project</h2>
-    </div>
-    {% assign featured_project = site.projects | where: "featured", true | first %}
-    {% if featured_project %}
-      <div class="project-showcase grid grid--halves grid--showcase">
-        <div class="card card--project">
-          <h3>{{ featured_project.title }}</h3>
-          <p>{{ featured_project.excerpt }}</p>
-          <a href="{{ featured_project.url }}" class="btn">View Project Details</a>
-        </div>
-        {% if featured_project.image %}
-          <div class="card--image">
-            <img src="{{ featured_project.image }}" alt="{{ featured_project.title }}">
-          </div>
-        {% endif %}
-      </div>
-    {% endif %}
   </div>
 </section>
 
