@@ -25,7 +25,7 @@ permalink: /contact/
     <div class="contact-grid grid grid--2col">
       <div class="contact-form-container card">
         <h2>Send Us a Message</h2>
-        <form class="contact-form" action="https://formspree.io/f/your-formspree-id" method="POST">
+        <form class="contact-form" action="https://formspree.io/f/xrbqybvg" method="POST">
           <div class="form-group">
             <label for="name">Your Name *</label>
             <input type="text" name="name" id="name" required>
