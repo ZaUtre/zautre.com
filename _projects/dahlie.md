@@ -20,6 +20,8 @@ categories:
   - e-commerce
   - quality-assurance
   - software-testing
+  - sfcc
+  - loyalty
 ---
 
 ## Project Overview

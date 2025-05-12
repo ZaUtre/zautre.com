@@ -29,6 +29,7 @@ technologies:
 categories:
   - e-commerce
   - retail-solutions
+  - sfcc
 ---
 
 ## Project Overview

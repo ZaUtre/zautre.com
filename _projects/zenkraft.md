@@ -23,6 +23,8 @@ categories:
   - salesforce-appexchange
   - logistics
   - e-commerce-integrations
+  - sfcc
+  - cartridge-development
 ---
 
 ## Project Overview

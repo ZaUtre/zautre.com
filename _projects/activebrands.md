@@ -21,8 +21,9 @@ technologies:
 categories:
   - e-commerce
   - SFCC
-  - Loyalty
+  - loyalty
   - accessibility
+  - sfcc
 ---
 
 ## Project Overview

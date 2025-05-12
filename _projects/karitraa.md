@@ -21,6 +21,8 @@ categories:
   - e-commerce
   - accessibility
   - user-experience
+  - sfcc
+  - third-party-integrations
 ---
 
 ## Project Overview

@@ -20,6 +20,9 @@ categories:
   - salesforce-appexchange
   - retail-analytics
   - e-commerce-integrations
+  - sfcc
+  - cartridge-development
+  - analytics
 ---
 
 ## Project Overview

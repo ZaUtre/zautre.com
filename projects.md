@@ -14,10 +14,11 @@ permalink: /projects/
     <label>Filter by:</label>
     <button class="filter-btn active" data-filter="all">All</button>
     <button class="filter-btn" data-filter="sfcc">SFCC</button>
-    <button class="filter-btn" data-filter="magento">Magento</button>
-    <button class="filter-btn" data-filter="shopify">Shopify</button>
+    <button class="filter-btn" data-filter="architecture">Architecture</button>
     <button class="filter-btn" data-filter="loyalty">Loyalty</button>
     <button class="filter-btn" data-filter="integrations">Integrations</button>
+    <button class="filter-btn" data-filter="analytics">Analytics</button>
+    <button class="filter-btn" data-filter="composable-commerce">Composeable Commerce</button>
   </div>
 </div>
 
@@ -34,7 +35,7 @@ permalink: /projects/
         {% if project.client %}
         <p class="client">{{ project.client }}</p>
         {% endif %}
-        <p>{{ project.excerpt }}</p>
+        <p>{{ project.solution }}</p>
         <div class="project-tags">
           {% for tag in project.technologies limit:3 %}
           <span class="tag">{{ tag }}</span>

@@ -21,6 +21,9 @@ categories:
   - e-commerce
   - luxury-retail
   - digital-strategy
+  - sfcc
+  - composable-commerce
+  - architecture
 ---
 
 ## Project Overview

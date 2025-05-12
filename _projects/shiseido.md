@@ -22,6 +22,8 @@ categories:
   - enterprise-architecture
   - composable-commerce
   - beauty-industry
+  - sfcc
+  - architecture
 ---
 
 ## Project Overview

@@ -19,6 +19,9 @@ technologies:
 categories:
   - e-commerce
   - content-management
+  - sfcc
+  - sports-industry
+  - loyalty
 ---
 
 ## Project Overview
