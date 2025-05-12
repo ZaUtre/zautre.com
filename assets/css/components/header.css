@@ -135,6 +135,7 @@
     box-shadow: var(--box-shadow);
     padding: var(--spacing-sm);
     z-index: 100;
+    height: max-content
   }
   
   .nav-menu.active {

@@ -123,3 +123,8 @@
   min-width: 180px;
   color: var(--secondary-color)
 }
+
+.hero-overlay .btn-primary {
+  min-width: 180px;
+  color: white;
+}
