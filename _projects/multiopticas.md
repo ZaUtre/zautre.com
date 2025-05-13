@@ -10,7 +10,7 @@ industry: Optical Retail
 challenge: Multiopticas needed to ensure business continuity for their complex existing e-commerce ecosystem while addressing maintenance challenges and preparing for future international expansion.
 solution: We established a comprehensive maintenance program for their existing Site Genesis platform while providing expert consultation on their technology landscape to enable long-term strategic improvements.
 results: Zautre successfully executed a seamless transition of Multiopticas' e-commerce platform in under one month, achieving 99.9% uptime, reducing critical incident response times by 65%, and establishing a sustainable path for evolution without disruption.
-testimonial: We were extremely pleased with the smooth and rapid transition of our e-commerce platform to Zautre. Equally important has been the significant improvement in communication. The Zautre team is highly responsive and collaborative, a welcome change that has increased our team's confidence and streamlined our interactions.
+testimonial: What sets Zautre apart is their rapid development capabilities combined with the expert guidance and technical knowledge they bring to our projects. Their adaptability to our changing needs has been invaluable to our business growth.
 testimonial_author: Carlos Otero
 testimonial_author_position: CFO
 testimonial_position: Multiopticas
