@@ -75,4 +75,4 @@ We continuously improved the existing platform with new features and optimizatio
 
 ## Partnership Evolution
 
-What began as a maintenance transition has evolved into a long-term partnership. Zautre now provides continuous optimization and feature development for Samsoe Samsoe, with current initiatives focused on personalization capabilities and implementing conversational commerce solutions to further enhance their customer experience.
+What began as a maintenance transition has evolved into a long-term partnership. Zautre worked with Samsoe Samsoe for more than a three years providing continuous optimization and feature development, with initiatives focused on personalization capabilities and implementing conversational commerce solutions to further enhance their customer experience.
