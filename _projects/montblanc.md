@@ -3,7 +3,7 @@ layout: project
 title: Montblanc UAE ana KSA E-commerce Platform
 subtitle: Gemini project build and SFCC Maintenance
 permalink: /projects/montblanc/
-featured: true
+featured: false
 image: /assets/images/projects/montblanc.png
 client: Montblanc UAE/KSA
 industry: Luxury Retail
