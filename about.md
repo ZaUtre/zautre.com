@@ -90,7 +90,7 @@ permalink: /about/
       <p class="subtitle">Our greatest asset is our team of talented professionals who bring diverse skills and a shared commitment to excellence to every project.</p>
     </div>
     
-    <div class="team-grid grid grid--3col">
+    <div class="team-grid grid grid--2col">
       {% for member in site.team %}
         <div class="team-member card">
           {% if member.image %}
