@@ -30,6 +30,7 @@ bundle exec jekyll build
 - `_projects/` — Collection of case study pages (front matter: `title`, `featured`, `image`, `solution`, etc.)
 - `_services/` — Collection of service pages
 - `_team/` — Team member data (not output as pages, `output: false`)
+- `_posts/` — Blog/news posts (standard Jekyll posts collection, filename `YYYY-MM-DD-slug.md`). Listed by `blog.md` at `/blog/`; categories in front matter drive the client-side filter buttons.
 - `_data/jobs.yml` — Job listings data consumed by the careers page
 - `assets/css/components/` — Modular CSS: `variables.css` defines design tokens, other files map to page/component areas
 - `assets/js/main.js` — Single JS file for site interactivity
