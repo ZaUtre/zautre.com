@@ -1,6 +1,7 @@
 ---
 layout: page
 hero_video: hero.mp4
+image: /assets/images/hero-poster.png
 ---
 
 <div class="hero-video-container">
@@ -95,12 +96,15 @@ hero_video: hero.mp4
     <div class="section-header">
       <h2>What Our Clients Say</h2>
     </div>
+    {% assign featured_project = site.projects | where: "featured", true | first %}
+    {% if featured_project and featured_project.testimonial %}
     <div class="testimonial card">
       <blockquote>
-        "Zautre's technical knowledge was impressive. They showed great understanding of our business requirements and delivered a solution that exceeded our expectations."
+        "{{ featured_project.testimonial }}"
       </blockquote>
-      <cite>— Client from Retail Industry</cite>
+      <cite>— {{ featured_project.testimonial_author }}, {{ featured_project.testimonial_author_position }}, {{ featured_project.testimonial_position }}</cite>
     </div>
+    {% endif %}
   </div>
 </section>
 

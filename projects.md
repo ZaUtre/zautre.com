@@ -3,6 +3,7 @@ layout: page
 title: Projects
 subtitle: Delivering results for retail and luxury brands worldwide
 permalink: /projects/
+image: /assets/images/hero-poster.png
 ---
 
 <div class="projects-intro">

@@ -12,6 +12,19 @@ address: "84 Cherni Vrah Blvd., fl. 5, 1407 Sofia, Bulgaria"
 github_username: zautre
 linkedin_username: zautre
 
+# SEO / Social
+twitter:
+  username: zautre
+  card: summary_large_image
+
+social:
+  name: Zautre
+  links:
+    - https://www.linkedin.com/company/zautre
+    - https://github.com/zautre
+
+logo: /assets/images/logo-salesforce3.webp
+
 # Build settings
 markdown: kramdown
 theme: minima
