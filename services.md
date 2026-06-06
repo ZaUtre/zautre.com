@@ -3,6 +3,7 @@ layout: page
 title: Services
 subtitle: Creating connected customer centric experiences that grow your digital business
 permalink: /services/
+image: /assets/images/hero-poster.png
 ---
 
 <section class="services-header section section--gradient">

@@ -3,6 +3,7 @@ layout: page
 title: Contact
 subtitle: Get in touch with our e-commerce experts
 permalink: /contact/
+image: /assets/images/hero-poster.png
 ---
 
 <section class="contact-header section section--gradient">

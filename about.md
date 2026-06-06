@@ -3,6 +3,7 @@ layout: page
 title: About
 subtitle: Dedicated e-commerce experts since 2015
 permalink: /about/
+image: /assets/images/hero-poster.png
 ---
 
 <section class="about-header section section--gradient">
