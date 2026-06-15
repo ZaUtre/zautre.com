@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
   if (menuToggle && navMenu) {
     menuToggle.addEventListener('click', function() {
       navMenu.classList.toggle('active');
+      menuToggle.classList.toggle('active');
     });
   }
 });

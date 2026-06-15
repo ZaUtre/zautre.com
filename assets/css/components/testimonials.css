@@ -1,39 +1,46 @@
 /* Zautre.com - Testimonials Section Styles */
 
 .testimonial-section {
-  background: linear-gradient(135deg, var(--white) 0%, var(--light-gray) 100%);
+  background: var(--bg-primary);
   text-align: center;
 }
 
 .testimonial {
   text-align: center;
-  max-width: 800px;
+  max-width: 850px;
   margin: var(--spacing-lg) auto 0;
-  padding: var(--spacing-lg);
-  background-color: var(--white);
-  border-radius: var(--border-radius);
+  padding: var(--spacing-xl) var(--spacing-lg);
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
   box-shadow: var(--box-shadow);
   position: relative;
+  overflow: hidden;
 }
 
 .testimonial::before {
-  content: '"';
-  font-family: Georgia, serif;
+  content: '“';
+  font-family: var(--heading-font);
+  font-weight: 800;
   font-size: 8rem;
   position: absolute;
-  top: -40px;
-  left: 20px;
-  color: var(--accent-color);
-  opacity: 0.2;
+  top: -20px;
+  left: 30px;
+  color: var(--primary-color);
+  opacity: 0.15;
   line-height: 1;
 }
 
 .testimonial blockquote {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-style: italic;
-  margin-bottom: var(--spacing-md);
+  font-weight: 300;
+  line-height: 1.5;
+  margin: 0 0 var(--spacing-md) 0;
   position: relative;
-  color: var(--dark-gray);
+  color: var(--text-color);
+  border: none;
+  padding: 0;
 }
 
 .testimonial blockquote::before {
@@ -43,35 +50,34 @@
 .testimonial cite {
   font-style: normal;
   font-weight: 600;
-  color: var(--primary-color);
+  font-family: var(--heading-font);
+  color: var(--secondary-color);
   display: block;
   margin-top: var(--spacing-sm);
+  letter-spacing: 0.05em;
+  font-size: 0.95rem;
 }
 
 /* Mobile responsive styles */
 @media screen and (max-width: 767px) {
   .testimonial blockquote {
-    font-size: 0.95rem; /* Even smaller font for testimonial text on mobile */
-    line-height: 1.4;
+    font-size: 1.15rem; 
+    line-height: 1.5;
     margin-bottom: var(--spacing-sm);
   }
   
   .testimonial::before {
-    font-size: 4rem; /* Smaller quote mark on mobile */
-    top: -20px;
-    left: 10px;
+    font-size: 5rem; 
+    top: -10px;
+    left: 15px;
   }
   
   .testimonial cite {
-    font-size: 0.8rem; /* Smaller citation font on mobile */
+    font-size: 0.85rem; 
   }
   
   .testimonial {
-    padding: var(--spacing-sm); /* Even less padding on mobile */
+    padding: var(--spacing-lg) var(--spacing-md); 
     margin-top: var(--spacing-md);
-  }
-  
-  .testimonial-section h2 {
-    font-size: 1.8rem; /* Smaller section heading on mobile */
   }
 }

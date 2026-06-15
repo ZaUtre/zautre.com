@@ -2,24 +2,25 @@
 layout: default
 ---
 
+<div class="service-header section section--gradient">
   <div class="container">
-    <div class="service-header section section--gradient">
-      <div class="container">
-        <div class="section-header">
-          <h1>{{ page.title }}</h1>
-          {% if page.subtitle %}
-          <p class="subtitle">{{ page.subtitle }}</p>
-          {% endif %}
-        </div>
-      </div>
+    <div class="section-header">
+      <h1>{{ page.title }}</h1>
+      {% if page.subtitle %}
+      <p class="subtitle">{{ page.subtitle }}</p>
+      {% endif %}
     </div>
+  </div>
+</div>
 
-    <div class="service-grid grid grid--1col">
+<div class="service-content section section--white">
+  <div class="container">
+    <div class="service-grid">
       <div class="service-main">
         {{ content }}
         
         {% if page.cta_text %}
-        <div class="service-cta card">
+        <div class="service-cta card card--option">
           <h3>{{ page.cta_title | default: "Ready to get started?" }}</h3>
           <p>{{ page.cta_text }}</p>
           <a href="{{ page.cta_link | default: '/contact' | relative_url }}" class="btn btn-primary">{{ page.cta_button | default: "Contact Us" }}</a>
@@ -40,7 +41,7 @@ layout: default
         {% endif %}
         
         {% if page.technologies %}
-        <div class="service-technologies card">
+        <div class="service-technologies card card--option">
           <h3>Technologies</h3>
           <div class="tech-tags">
             {% for tech in page.technologies %}
@@ -80,5 +81,5 @@ layout: default
       {% endfor %}
     </div>
   </div>
-
+</div>
 {% endif %}

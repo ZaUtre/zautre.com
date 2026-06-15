@@ -3,18 +3,37 @@
 .hero-section {
   padding: var(--spacing-xl) 0;
   text-align: center;
+  position: relative;
+  z-index: 5;
+}
+
+.hero-section h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: var(--spacing-sm);
+  background: linear-gradient(135deg, #ffffff 30%, #a1a1aa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none;
+  letter-spacing: -0.03em;
 }
 
 .hero-subtitle {
   font-size: 1.5rem;
-  margin-bottom: var(--spacing-md);
+  color: var(--text-muted);
+  margin-bottom: var(--spacing-lg);
+  font-weight: 400;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-cta {
   display: flex;
   justify-content: center;
   gap: var(--spacing-sm);
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
 }
 
 /* Platform Logos in Hero */
@@ -23,32 +42,49 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: var(--spacing-md);
-  margin-top: var(--spacing-md);
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+  padding: 1.5rem var(--spacing-md);
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  max-width: max-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .platform-logo {
-  height: 40px;
+  height: 32px;
   width: auto;
-  opacity: 0.9;
-  filter: grayscale(100%);
+  opacity: 0.4;
+  filter: grayscale(100%) brightness(200%);
   transition: var(--transition);
 }
 
 .platform-logo:hover {
   opacity: 1;
-  filter: grayscale(0%) sepia(50%) hue-rotate(190deg) saturate(300%);
-  transform: scale(1.2);
-  color: var(--secondary-color);
+  filter: grayscale(0%) brightness(100%);
+  transform: scale(1.08);
 }
 
 @media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2.75rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
   .platform-logos {
-    gap: var(--spacing-sm);
+    gap: var(--spacing-md);
+    padding: 1rem var(--spacing-sm);
   }
   
   .platform-logo {
-    height: 30px;
+    height: 26px;
   }
 }
 
@@ -56,23 +92,19 @@
   .hero-cta {
     flex-direction: column;
     align-items: center;
-    gap: var(--spacing-md);
+    gap: var(--spacing-sm);
   }
   
   .hero-cta .btn {
     width: 100%;
-    max-width: 250px;
-  }
-
-  /* Hide hero heading and subtitle on mobile */
-  .hero-section h1{
-    display: none;
+    max-width: 280px;
   }
 }
 
 .hero-video-container {
   position: relative;
-  height: 100vh;
+  height: 80vh;
+  min-height: 550px;
   width: 100vw;
   left: 50%;
   right: 50%;
@@ -80,13 +112,15 @@
   margin-right: -50vw;
   max-width: none;
   overflow: hidden;
-  background-color: var(--dark-gray);
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .hero-video-container video {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  opacity: 0.5; /* Lightened by 10% for better visual balance */
 }
 
 .hero-overlay {
@@ -100,31 +134,38 @@
   justify-content: center;
   align-items: center;
   padding: var(--spacing-lg);
-  background-color: rgba(0, 0, 0, 0.4);
-  color: var(--white);
+  background: radial-gradient(circle at center, rgba(9, 9, 11, 0.4) 0%, rgba(9, 9, 11, 0.85) 100%);
+  color: var(--text-color);
   z-index: 2;
 }
 
 .hero-overlay h1 {
-  font-size: 3.5rem;
-  margin-bottom: var(--spacing-sm);
-  color: var(--white);
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 4.5rem;
+  font-weight: 800;
+  margin-bottom: var(--spacing-xs);
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none;
+  letter-spacing: -0.04em;
 }
 
 .hero-overlay .hero-subtitle {
-  color: var(--white);
-  font-size: 1.5rem;
-  margin-bottom: var(--spacing-md);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  color: var(--text-muted);
+  font-size: 1.6rem;
+  margin-bottom: var(--spacing-lg);
+  font-weight: 300;
+  text-shadow: none;
+  max-width: 700px;
 }
 
-.hero-overlay .btn {
-  min-width: 180px;
-  color: var(--secondary-color);
+.hero-overlay .btn-secondary {
+  border-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.03);
 }
 
-.hero-overlay .btn-primary {
-  min-width: 180px;
-  color: white;
+.hero-overlay .btn-secondary:hover {
+  border-color: var(--secondary-color);
+  background-color: rgba(6, 182, 212, 0.05);
 }
