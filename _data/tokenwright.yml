@@ -1,0 +1,146 @@
+# Tokenwright — a ZaUtre company. Single source of truth for every
+# Tokenwright mention on zautre.com (announcement bar, home promo, product page,
+# footer). Copy mirrors tokenwright.com — keep the two in sync.
+
+name: Tokenwright
+tagline: Managed Tokens for Salesforce Commerce Cloud
+status: Private launch
+url: https://tokenwright.com/
+# UTM-tagged links so referrals from zautre.com are attributable.
+waitlist_url: https://tokenwright.com/?utm_source=zautre.com&utm_medium=referral&utm_campaign=waitlist#/#waitlist
+learn_url: https://tokenwright.com/?utm_source=zautre.com&utm_medium=referral&utm_campaign=learn
+pricing_url: https://tokenwright.com/?utm_source=zautre.com&utm_medium=referral&utm_campaign=pricing#/pricing
+demo_url: https://calendar.app.google/KY57XQRmoHMM7kxo7
+
+headline: Senior operators. Quoted in minutes.
+accent: The velocity layer for Salesforce Commerce Cloud.
+lede: >-
+  The backlog item that's been stuck for months can ship this week. One senior
+  operator, with deep context on your entire codebase, quotes it against your
+  actual code in minutes and delivers a merge-ready PR in days.
+free_tier: >-
+  Start free: the Q&A Agent, scoping and 300 starter tokens (~2 small changes).
+  No card, no commitment.
+
+facts:
+  - Quote in minutes
+  - Merge-ready PR in days
+  - Priced on outcomes, not hours
+  - Firm cap — overruns on us
+
+steps:
+  - num: "01"
+    label: Request
+    desc: Describe what you want in plain English. "Add Apple Pay to checkout." That's the brief.
+  - num: "02"
+    label: Specification
+    desc: The engine returns scope, approach, a firm token quote and risk flags. You approve before anything is reserved.
+  - num: "03"
+    label: Build
+    desc: AI generates the change. One named senior operator reviews, refines and validates it with full codebase context.
+  - num: "04"
+    label: Delivery
+    desc: A clean, documented, tested pull request lands in your repo. Your SI merges and deploys on their schedule.
+
+# Illustrative quote, as published on tokenwright.com/pricing
+sample_quote:
+  request: Add Apple Pay to checkout, including international storefronts and the existing wallet test suite.
+  lines:
+    - k: AI context + generation
+      v: 144
+    - k: Senior operator review
+      v: 240
+    - k: Integration & PR effort
+      v: 120
+    - k: Liability & guarantee
+      v: 72
+  total: 576
+  compare: ≈ €1,800 delivered. The same scope runs ~€7,500 with an in-house or agency team.
+
+token_sizes:
+  - k: Small feature or fix
+    v: 80 – 150 tokens
+  - k: Mid-size feature
+    v: 300 – 700 tokens
+  - k: Hard monthly cap
+    v: Firm. Always.
+
+agents:
+  - name: Q&A Agent
+    tag: Available now
+    body: >-
+      Merchandisers, PMs and IT leads ask plain-English questions about how the
+      store actually works. Answers come back grounded in your real code.
+    examples:
+      - Why don't loyalty points apply to sale items?
+      - Where's the free-shipping threshold set?
+  - name: Monitor Agent
+    tag: Available now
+    body: >-
+      Watches sandbox logs and the repository for errors, anomalies and
+      security risks, and surfaces each one in plain language with a
+      quote-ready fix one click away.
+    examples:
+      - Error rate spike, /cart route
+      - Slow query, loyalty_balance.ds
+  - name: Future agents
+    tag: On the roadmap
+    body: >-
+      Thirteen more on the list today — from a Performance Agent to a Platform
+      Upgrade Agent. Subscribers vote on what ships next and get every one
+      without renegotiation.
+    examples:
+      - Performance Agent
+      - Security Auditor
+
+access:
+  - A sandbox/dev instance (preferred) — or read-only repository access
+  - Scoped per operator; no production access required
+  - Cartridge structure, custom code, integration manifests
+never:
+  - Production environments. Ever.
+  - Customer data, PII, payment infrastructure
+  - Deploy keys, pager rotations, CI/CD secrets
+
+stages:
+  - n: Stage 01
+    title: Velocity layer
+    when: Days 0 – 90
+    body: Tokenwright runs alongside your incumbent SI and clears the backlog with clean PRs. They keep production, monitoring and pager duty.
+  - n: Stage 02
+    title: Shared operations
+    when: Months 6 – 12
+    body: Once the Monitor Agent earns trust, routine fixes and small incidents can move over. Your SI keeps the bigger production events.
+  - n: Stage 03
+    title: Full stack, with ZaUtre
+    when: When you ask
+    body: ZaUtre absorbs the traditional SFCC scope — deploys, support, 24/7 operations — under one relationship. A conversation you raise, never one we pitch.
+
+faqs:
+  - q: How is Tokenwright related to ZaUtre?
+    a: >-
+      Tokenwright is built by ZaUtre, the Salesforce Commerce Cloud consultancy
+      behind this site. Tokenwright is the productized, AI-accelerated velocity
+      layer; ZaUtre runs the traditional SFCC capability — deploys, 24/7 ops,
+      complex platform work — that sits underneath when clients want it.
+  - q: Why a waiting list?
+    a: >-
+      Every Managed Token traces to a senior operator's review, so admissions
+      are capped to protect that guarantee. Most accounts are admitted within
+      two weeks; tell us in the signup notes if your case is time-critical.
+  - q: How does billing work?
+    a: >-
+      Each monthly plan includes a token balance. You submit a task, get a firm
+      token quote in minutes, and tokens are only deducted once your approver
+      signs off. If the work runs over, the overrun is on us.
+  - q: What happens to our existing agency?
+    a: >-
+      Nothing, on day one. Tokenwright sits alongside them — they keep
+      production, pager duty and long-tail platform work. Consolidation is a
+      conversation you raise, not one we pitch.
+  - q: What about security and code access?
+    a: >-
+      Read-only, always. A sandbox or dev instance is preferred; read-only
+      repository access scoped per operator is the fallback. Production,
+      payment infrastructure and customer data are never touched. SOC 2 Type II
+      audit is in progress.

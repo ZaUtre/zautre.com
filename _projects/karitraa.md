@@ -1,6 +1,8 @@
 ---
 layout: project
 title: Kari Traa - ADA Compliance and Feature Enhancements
+card_title: "Accessibility & feature enhancements"
+card_result: "AA accessibility for the US storefront, plus new conversion features"
 subtitle: Improving Accessibility and User Experience for an International Sportswear Brand
 permalink: /projects/kari-traa/
 featured: false

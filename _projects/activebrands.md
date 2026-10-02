@@ -1,6 +1,8 @@
 ---
 layout: project
 title: Active Brands - Multi-Brand E-commerce Enhancements & Platform Transition
+card_title: "Multi-brand commerce & platform transition"
+card_result: "Takeover within a month, 3 years of managed services, AA accessibility"
 subtitle: Streamlining operations and user experience across a portfolio of premium sports brands.
 permalink: /projects/active-brands/
 featured: false

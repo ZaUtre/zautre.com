@@ -1,0 +1,57 @@
+{%- assign tw = site.data.tokenwright -%}
+<section class="tw-promo" aria-labelledby="tw-promo-title">
+  <div class="container">
+    <div class="tw-panel" data-reveal>
+      <div class="tw-panel__main">
+        <div class="tw-brandline">
+          {% include tokenwright-mark.svg size=36 %}
+          <span class="tw-brandline__name">{{ tw.name }}</span>
+          <span class="tw-chip"><span class="tw-chip__dot" aria-hidden="true"></span>New from ZaUtre · {{ tw.status }}</span>
+        </div>
+
+        <h2 class="tw-title" id="tw-promo-title">{{ tw.headline | replace: 'Quoted in minutes.', '<mark>Quoted in minutes.</mark>' }}</h2>
+        <p class="tw-accent">{{ tw.accent }}</p>
+        <p class="tw-lede">{{ tw.lede }}</p>
+
+        <ul class="tw-facts">
+          {%- for f in tw.facts %}
+          <li>{{ f }}</li>
+          {%- endfor %}
+        </ul>
+
+        <div class="tw-actions">
+          <a class="btn btn--tw" href="{{ tw.waitlist_url }}" rel="noopener">Join the waiting list {% include icon.html name="arrow-up-right" size="16" %}</a>
+          <a class="btn btn--tw-ghost" href="{{ '/tokenwright/' | relative_url }}">How Managed Tokens work</a>
+        </div>
+        <p class="tw-free">{{ tw.free_tier }}</p>
+      </div>
+
+      <div class="tw-panel__side">
+        <div class="tw-ticket" data-ticket>
+          <div class="tw-ticket__head">
+            <span class="tw-ticket__label">Quote · illustrative</span>
+            <span class="tw-ticket__pill">{% include icon.html name="clock" size="13" %} Quoted in minutes</span>
+          </div>
+          <p class="tw-ticket__req"><span class="tw-ticket__prompt" aria-hidden="true">&gt;</span> {{ tw.sample_quote.request }}</p>
+          <ul class="tw-ticket__lines">
+            {%- for l in tw.sample_quote.lines %}
+            <li style="--i: {{ forloop.index }}"><span>{{ l.k }}</span><span class="tw-ticket__leader" aria-hidden="true"></span><span>{{ l.v }} tokens</span></li>
+            {%- endfor %}
+          </ul>
+          <div class="tw-ticket__total"><span>Quoted total</span><strong>{{ tw.sample_quote.total }} tokens · firm cap</strong></div>
+          <p class="tw-ticket__compare">{{ tw.sample_quote.compare }}</p>
+        </div>
+      </div>
+
+      <ol class="tw-steps">
+        {%- for s in tw.steps %}
+        <li class="tw-step{% if forloop.index == 2 %} is-featured{% endif %}">
+          <span class="tw-step__num">{{ s.num }}</span>
+          <span class="tw-step__label">{{ s.label }}</span>
+          <span class="tw-step__desc">{{ s.desc }}</span>
+        </li>
+        {%- endfor %}
+      </ol>
+    </div>
+  </div>
+</section>

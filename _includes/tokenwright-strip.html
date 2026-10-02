@@ -1,0 +1,13 @@
+{%- comment -%} Compact Tokenwright promo for service pages, case studies and posts. {%- endcomment -%}
+{%- assign tw = site.data.tokenwright -%}
+<aside class="tw-strip" aria-label="{{ tw.name }}">
+  <div class="tw-strip__brand">{% include tokenwright-mark.svg size=40 %}</div>
+  <div class="tw-strip__body">
+    <p class="tw-strip__eyebrow">New from ZaUtre · {{ tw.name }}</p>
+    <p class="tw-strip__title">{{ include.title | default: "Stuck backlog item? Get it quoted in minutes, delivered as a merge-ready PR in days." }}</p>
+  </div>
+  <div class="tw-strip__actions">
+    <a class="btn btn--tw btn--sm" href="{{ tw.waitlist_url }}" rel="noopener">Join the waiting list</a>
+    <a class="link-arrow link-arrow--tw-dark" href="{{ '/tokenwright/' | relative_url }}">Learn more {% include icon.html name="arrow" size="14" %}</a>
+  </div>
+</aside>

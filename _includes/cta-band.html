@@ -1,0 +1,15 @@
+{%- assign tw = site.data.tokenwright -%}
+<section class="cta-band" aria-labelledby="cta-band-title">
+  <div class="container">
+    <div class="cta-band__inner" data-reveal>
+      <div class="cta-band__bg" aria-hidden="true"></div>
+      <p class="eyebrow">{{ include.eyebrow | default: "Next step" }}</p>
+      <h2 class="cta-band__title" id="cta-band-title">{{ include.title | default: "Make your storefront the fastest thing in your category." }}</h2>
+      <p class="cta-band__text">{{ include.text | default: "Talk directly to the engineers who will do the work — no account managers, no handoffs. We'll start with what's slowing you down." }}</p>
+      <div class="cta-band__actions">
+        <a class="btn btn--primary btn--lg" href="{{ include.href | default: '/contact/' | relative_url }}">{{ include.button | default: "Talk to an engineer" }} {% include icon.html name="arrow" size="18" %}</a>
+        <a class="btn btn--ghost btn--lg" href="{{ tw.waitlist_url }}" rel="noopener">{% include tokenwright-mark.svg size=20 %} Join the Tokenwright waitlist</a>
+      </div>
+    </div>
+  </div>
+</section>

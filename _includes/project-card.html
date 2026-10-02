@@ -1,0 +1,23 @@
+{%- comment -%} Case-study card. Params: project, eager (bool), headline (heading level, default h3) {%- endcomment -%}
+{%- assign p = include.project -%}
+{%- assign h = include.headline | default: 'h3' -%}
+{%- assign cats = p.categories | join: ' ' | downcase -%}
+{%- assign client = p.client | split: ' (' | first -%}
+<article class="work-card" data-categories="{{ cats }}">
+  <a class="work-card__link" href="{{ p.url | relative_url }}">
+    <div class="work-card__frame">
+      <div class="work-card__chrome" aria-hidden="true"><i></i><i></i><i></i><span>{{ client | default: p.title | truncate: 34 }}</span></div>
+      {%- if p.image %}
+      {% if include.eager %}{% include picture.html src=p.image alt="" width="1000" height="400" class="work-card__img" loading="eager" %}{% else %}{% include picture.html src=p.image alt="" width="1000" height="400" class="work-card__img" %}{% endif %}
+      {%- endif %}
+    </div>
+    <div class="work-card__body">
+      <p class="work-card__meta"><span>{{ client }}</span>{% if p.industry %}<span class="work-card__dot" aria-hidden="true">·</span><span>{{ p.industry }}</span>{% endif %}</p>
+      <{{ h }} class="work-card__title">{{ p.card_title | default: p.title }}</{{ h }}>
+      {%- if p.card_result %}
+      <p class="work-card__result">{% include icon.html name="activity" size="15" %}<span>{{ p.card_result }}</span></p>
+      {%- endif %}
+      <span class="work-card__cta">Read case study {% include icon.html name="arrow" size="14" %}</span>
+    </div>
+  </a>
+</article>

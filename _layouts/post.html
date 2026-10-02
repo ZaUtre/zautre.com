@@ -2,40 +2,42 @@
 layout: default
 ---
 
-<article class="post-content">
-  <div class="container">
-    <header class="post-header">
-      <div class="post-meta">
-        <span class="date">{{ page.date | date: "%B %d, %Y" }}</span>
-        {% if page.author %}
-        <span class="author">by {{ page.author }}</span>
-        {% endif %}
-      </div>
-      <h1>{{ page.title }}</h1>
-      {% if page.subtitle %}
-      <p class="post-subtitle">{{ page.subtitle }}</p>
-      {% endif %}
+<article class="post">
+  <header class="page-hero page-hero--post">
+    <div class="page-hero__bg" aria-hidden="true"></div>
+    <div class="container container--narrow page-hero__inner">
+      <a class="post__back" href="{{ '/blog/' | relative_url }}">{% include icon.html name="arrow" size="14" class="icon--flip" %} All news</a>
+      <p class="post__meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+        {% if page.author %}<span aria-hidden="true">·</span><span>{{ page.author }}</span>{% endif %}
+        <span aria-hidden="true">·</span><span>{{ content | strip_html | number_of_words | divided_by: 220 | plus: 1 }} min read</span>
+      </p>
+      <h1 class="page-hero__title">{{ page.title }}</h1>
+      {% if page.subtitle %}<p class="page-hero__subtitle">{{ page.subtitle }}</p>{% endif %}
       {% if page.categories.size > 0 %}
-      <div class="post-tags">
-        {% for category in page.categories %}
-        <span class="tag">{{ category }}</span>
-        {% endfor %}
+      <div class="tag-list">
+        {% for category in page.categories %}<span class="tag">{{ category }}</span>{% endfor %}
       </div>
       {% endif %}
-    </header>
+    </div>
+  </header>
 
-    {% if page.image %}
-    <div class="post-hero-image">
-      <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+  <div class="container container--narrow">
+    {% if page.cover %}
+    <div class="post__cover">
+      {% include picture.html src=page.cover alt=page.title loading="eager" %}
     </div>
     {% endif %}
 
-    <div class="post-body">
+    <div class="prose prose--article">
       {{ content }}
     </div>
 
-    <footer class="post-footer">
-      <a href="{{ '/blog' | relative_url }}" class="btn">&larr; Back to News</a>
+    {% unless page.hide_tokenwright %}{% include tokenwright-strip.html %}{% endunless %}
+
+    <footer class="post__footer">
+      <a href="{{ '/blog/' | relative_url }}" class="btn btn--ghost">{% include icon.html name="arrow" size="16" class="icon--flip" %} Back to news</a>
+      <a href="{{ '/contact/' | relative_url }}" class="link-arrow">Discuss this with our engineers {% include icon.html name="arrow" size="14" %}</a>
     </footer>
   </div>
 </article>

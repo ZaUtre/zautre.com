@@ -1,103 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }} - {{ site.description | strip_html | truncate: 50 }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+  <title>{% if page.meta_title %}{{ page.meta_title }}{% elsif page.title %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title }} · {{ site.tagline }}{% endif %}</title>
+  <meta name="theme-color" content="#07080a">
+  <meta name="color-scheme" content="dark">
+  <link rel="preload" href="{{ '/assets/fonts/geist-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.time | date: '%s' }}">
   <link rel="icon" href="{{ '/favicon.svg' | relative_url }}" type="image/svg+xml">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+  <link rel="alternate" type="application/atom+xml" title="{{ site.title }} News" href="{{ '/feed.xml' | relative_url }}">
   {% seo title=false %}
-  <script>function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");
-o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,
-o.onload=function(){window.trackingFunctions.onLoad({appId:"67ed3b3a6c20a700114546f5"})},
-document.head.appendChild(o)}initApollo();</script>
+  <script>document.documentElement.className=document.documentElement.className.replace('no-js','js')</script>
 </head>
-<body class="{% if page.layout %}layout-{{ page.layout }}{% endif %} {% if page.class %}{{ page.class }}{% endif %}">
-  <header class="site-header">
-    <div class="container">
-      <div class="logo">
-        <a href="{{ "/" | relative_url }}">
-          {% include zautre-logo.svg %}
-        </a>
-      </div>
-      <nav class="main-nav">
-        <button class="menu-toggle" aria-label="Toggle Menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <ul class="nav-menu">
-          {% for item in site.header_pages %}
-            {% assign current_page = site.pages | where: "path", item | first %}
-            {% if current_page.title %}
-            <li>
-              <a href="{{ current_page.url | relative_url }}" {% if page.url == current_page.url %}class="active"{% endif %}>
-                {{ current_page.title }}
-              </a>
-            </li>
-            {% endif %}
-          {% endfor %}
-          <li class="cta-button">
-            <a href="{{ '/contact' | relative_url }}" class="btn btn-primary">Get in Touch</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<body class="{% if page.layout %}layout-{{ page.layout }}{% endif %}{% if page.class %} {{ page.class }}{% endif %}">
+  <a class="skip-link" href="#main">Skip to content</a>
+  {% include announcement.html %}
+  {% include header.html %}
 
-  <main class="site-content">
+  <main id="main" class="site-main">
     {{ content }}
   </main>
 
-  <footer class="site-footer section section--dark">
-    <div class="container">
-      <div class="footer-grid grid grid--footer">
-        <div class="footer-col">
-          <h3>Zautre</h3>
-          <p>E-commerce solutions for tomorrow</p>
-          <p>{{ site.address }}</p>
-          <p>Phone: <a href="tel:{{ site.phone }}">{{ site.phone }}</a></p>
-          <p>Email: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
-        </div>
-        <div class="footer-col">
-          <h3>Services</h3>
-          <ul>
-            {% for service in site.services limit: 5 %}
-            <li><a href="{{ service.url | relative_url }}">{{ service.title }}</a></li>
-            {% endfor %}
-            <li><a href="{{ '/services' | relative_url }}">View All Services</a></li>
-          </ul>
-        </div>        <div class="footer-col">
-          <h3>Resources</h3>
-          <ul>
-            <li><a href="{{ '/blog' | relative_url }}">Blog</a></li>
-            <li><a href="{{ '/projects' | relative_url }}">Case Studies</a></li>
-            <li><a href="{{ '/careers' | relative_url }}">Careers</a></li>
-            <li><a href="{{ '/contact' | relative_url }}">Contact Us</a></li>
-            <li><a href="{{ '/privacy' | relative_url }}">Privacy Policy</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
-        <div class="footer-social">
-          {% if site.linkedin_username %}
-          <a href="https://www.linkedin.com/company/{{ site.linkedin_username }}" target="_blank" rel="noopener" aria-label="Zautre on LinkedIn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-          </a>
-          {% endif %}
-          {% if site.github_username %}
-          <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener" aria-label="Zautre on GitHub">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-          </a>
-          {% endif %}
-        </div>
-      </div>
-    </div>
-  </footer>
+  {% include footer.html %}
 
-  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/main.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
+  {% include analytics.html %}
 </body>
 </html>

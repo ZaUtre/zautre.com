@@ -1,118 +1,73 @@
 ---
 layout: page
 title: Contact
-subtitle: Get in touch with our e-commerce experts
+subtitle: Tell us about your storefront. You'll hear back from an engineer — not a sales queue.
 permalink: /contact/
-image: /assets/images/hero-poster.png
+description: "Contact ZaUtre's SFCC engineers in Sofia, Bulgaria. Platform builds, takeovers, performance reviews and team augmentation for retail and luxury brands."
 ---
 
-<section class="contact-header section section--gradient">
-  <div class="container">
-    <div class="section-header">
-      <h1>{{ page.title }}</h1>
-      <p class="subtitle">{{ page.subtitle }}</p>
-    </div>
-  </div>
-</section>
+{% include page-hero.html eyebrow="Contact" title="Let's talk about your platform." subtitle=page.subtitle %}
 
-<div class="contact-intro section section--white">
-  <div class="container">
-    <p class="section-lead">Ready to discuss your e-commerce project or have questions about our services? We'd love to hear from you. Our team is ready to provide the expertise and solutions your retail or luxury brand needs.</p>
-  </div>
-</div>
-
-<section class="contact-main section section--light">
-  <div class="container">
-    <div class="contact-grid grid grid--2col">
-      <div class="contact-form-container card">
-        <h2>Send Us a Message</h2>
-        <form class="contact-form" action="https://formspree.io/f/xrbqybvg" method="POST">
-          <div class="form-group">
-            <label for="name">Your Name *</label>
-            <input type="text" name="name" id="name" required>
+<section class="section section--tight">
+  <div class="container contact-grid">
+    <div class="form-card">
+      <h2 class="form-card__title">Send us a message</h2>
+      <form class="form" action="https://formspree.io/f/xrbqybvg" method="POST" data-contact-form>
+        <div class="form__row">
+          <div class="field">
+            <label for="name">Your name <span aria-hidden="true">*</span></label>
+            <input type="text" name="name" id="name" autocomplete="name" required>
           </div>
-          <div class="form-group">
-            <label for="email">Your Email *</label>
-            <input type="email" name="email" id="email" required>
+          <div class="field">
+            <label for="email">Work email <span aria-hidden="true">*</span></label>
+            <input type="email" name="email" id="email" autocomplete="email" required>
           </div>
-          <div class="form-group">
+        </div>
+        <div class="form__row">
+          <div class="field">
             <label for="company">Company</label>
-            <input type="text" name="company" id="company">
+            <input type="text" name="company" id="company" autocomplete="organization">
           </div>
-          <div class="form-group">
+          <div class="field">
             <label for="subject">Subject</label>
             <input type="text" name="subject" id="subject">
           </div>
-          <div class="form-group">
-            <label for="message">Your Message *</label>
-            <textarea name="message" id="message" rows="6" required></textarea>
-          </div>
-          <div class="form-group">
-            <div class="g-recaptcha" data-sitekey="6Lf44y0rAAAAAII3xboOsDq6cbfICiEiU80EqyaK"></div>
-          </div>
-          <div class="form-actions">
-            <button type="submit" class="btn btn-primary">Send Message</button>
-          </div>
-        </form>
-      </div>
-      <div class="contact-info card">
-        <h2>Our Information</h2>
-        <div class="info-section">
-          <h3>Address</h3>
-          <p>{{ site.address }}</p>
-          <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.0009025732144!2d23.30953417687784!3d42.67044771964663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa84f2d5c60b81%3A0x8a8a40797f16bfd7!2s84%20Cherni%20Vrah%20Blvd%2C%20Sofia%2C%20Bulgaria!5e0!3m2!1sen!2sus!4v1714425362340!5m2!1sen!2sus" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
         </div>
-        <div class="info-section">
-          <h3>Contact Details</h3>
-          <ul class="contact-details">
-            <li><strong>Email:</strong> <a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-            <li><strong>Phone:</strong> <a href="tel:{{ site.phone }}">{{ site.phone }}</a></li>
-          </ul>
+        <div class="field">
+          <label for="message">How can we help? <span aria-hidden="true">*</span></label>
+          <textarea name="message" id="message" rows="6" required placeholder="A few lines about your storefront, timeline and what's slowing you down."></textarea>
         </div>
-        <div class="info-section social-connect">
-          <h3>Connect With Us</h3>
-          <div class="social-links">
-            <a href="https://github.com/zautre" target="_blank" rel="noopener" aria-label="GitHub">
-              <img src="https://cdn.simpleicons.org/github/24292f" alt="GitHub" class="icon" width="24" height="24" />
-              
-            </a>
-            <a href="https://www.linkedin.com/company/zautre" target="_blank" rel="noopener" aria-label="LinkedIn">
-              <img src="/assets/images/linkedin-svgrepo-com.svg" alt="LinkedIn" class="icon" width="24" height="24" style="filter: grayscale(100%) brightness(0);" />
-              
-            </a>
-          </div>
+        <div class="field field--captcha">
+          <div class="g-recaptcha" data-sitekey="6Lf44y0rAAAAAII3xboOsDq6cbfICiEiU80EqyaK" data-theme="dark"></div>
+          <p class="field__hint" data-captcha-hint>Spam protection loads when you start typing.</p>
+        </div>
+        <div class="form__actions">
+          <button type="submit" class="btn btn--primary btn--lg">Send message {% include icon.html name="arrow" size="18" %}</button>
+          <p class="form__note">We reply within one business day.</p>
+        </div>
+        <p class="form__error" role="alert" hidden data-form-error></p>
+      </form>
+    </div>
+
+    <aside class="contact-side">
+      <div class="side-card">
+        <h2 class="side-card__title">Direct lines</h2>
+        <ul class="contact-list">
+          <li>{% include icon.html name="mail" size="18" %}<div><span>Email</span><a href="mailto:{{ site.email }}">{{ site.email }}</a></div></li>
+          <li>{% include icon.html name="phone" size="18" %}<div><span>Phone</span><a href="tel:{{ site.phone }}">{{ site.phone }}</a></div></li>
+          <li>{% include icon.html name="pin" size="18" %}<div><span>Office</span>{{ site.address }}</div></li>
+        </ul>
+        <div class="contact-social">
+          <a href="https://www.linkedin.com/company/{{ site.linkedin_username }}" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">{% include icon.html name="linkedin" size="16" %} LinkedIn</a>
+          <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">{% include icon.html name="github" size="16" %} GitHub</a>
         </div>
       </div>
-    </div>
+
+      <div class="map-frame">
+        <iframe title="Map: ZaUtre office, 84 Cherni Vrah Blvd., Sofia" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.0009025732144!2d23.30953417687784!3d42.67044771964663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa84f2d5c60b81%3A0x8a8a40797f16bfd7!2s84%20Cherni%20Vrah%20Blvd%2C%20Sofia%2C%20Bulgaria!5e0!3m2!1sen!2sus!4v1714425362340!5m2!1sen!2sus" width="600" height="260" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+
+      {% include tokenwright-strip.html title="Have a specific SFCC task? Tokenwright quotes it against your code in minutes." %}
+    </aside>
   </div>
 </section>
-
-<section class="cta-section section section--gradient">
-  <div class="container">
-    <div class="section-header">
-      <h2>Ready to start your project?</h2>
-      <p class="subtitle">Let's discuss how Zautre can help your retail or luxury brand achieve its digital commerce goals.</p>
-    </div>
-    <div class="text-center">
-      <a href="mailto:{{ site.email }}" class="btn btn-large">Contact Our Team</a>
-    </div>
-  </div>
-</section>
-
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-<script>
-  // Form validation
-  document.addEventListener('DOMContentLoaded', function() {
-    const contactForm = document.querySelector('.contact-form');
-    if (contactForm) {
-      contactForm.addEventListener('submit', function(e) {
-        if (!grecaptcha.getResponse()) {
-          e.preventDefault();
-          alert('Please complete the reCAPTCHA verification.');
-        }
-      });
-    }
-  });
-</script>

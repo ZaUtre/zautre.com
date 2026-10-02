@@ -1,10 +1,11 @@
 # Zautre.com Configuration
-title: Zautre
+title: ZaUtre
 email: office@zautre.com
+tagline: Fast storefronts. Faster delivery.
 description: >-
-  E-commerce solutions for tomorrow. Zautre is a dedicated team of web architects, 
-  developers and QA experts specializing in Salesforce Commerce Cloud (SFCC) 
-  solutions for retail and luxury brands.
+  ZaUtre is a senior Salesforce Commerce Cloud (SFCC) engineering team for retail
+  and luxury brands: architecture, development, performance engineering and QA.
+  Builders of Tokenwright, AI-accelerated SFCC delivery.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://zautre.com" # the base hostname & protocol for your site
 phone: "+359878899569"
@@ -18,16 +19,19 @@ twitter:
   card: summary_large_image
 
 social:
-  name: Zautre
+  name: ZaUtre
   links:
     - https://www.linkedin.com/company/zautre
     - https://github.com/zautre
 
-logo: /assets/images/logo-salesforce3.webp
+logo: /assets/images/zautre-logo.png
 
 # Build settings
 markdown: kramdown
 theme: minima
+sass:
+  sass_dir: _sass
+  style: compressed
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
@@ -37,9 +41,10 @@ plugins:
 header_pages:
   - services.md
   - projects.md
+  - tokenwright.md
   - about.md
   - careers.md
-  - contact.md
+  - blog.md
 
 # Collections
 collections:
@@ -52,8 +57,20 @@ collections:
   team:
     output: false
 
+# Default social share image (overridden by `image:` in front matter)
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/images/og/zautre.jpg
+
 # Exclude from processing
 exclude:
+  - CLAUDE.md
+  - README.md
+  - package-lock.json
+  - hero.mp4
+  - assets/images/hero-poster.png
   - Gemfile
   - Gemfile.lock
   - node_modules

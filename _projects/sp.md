@@ -1,6 +1,8 @@
 ---
 layout: project
 title: Sweet Protection - Enhanced E-commerce Experience
+card_title: "Page Designer on a legacy architecture"
+card_result: "Visual page building for the content team"
 subtitle: Customizing Page Designer for a Leading Sports Gear Brand
 permalink: /projects/sweet-protection/
 featured: false

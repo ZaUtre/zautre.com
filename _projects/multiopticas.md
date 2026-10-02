@@ -1,6 +1,8 @@
 ---
 layout: project
 title: Multiopticas E-commerce Solution
+card_title: "Site Genesis takeover & stabilisation"
+card_result: "99.9% uptime, 65% faster incident response"
 subtitle: Advanced Digital Commerce Platform for Leading Optical Retailer
 permalink: /projects/multiopticas/
 featured: true

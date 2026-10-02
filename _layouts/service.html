@@ -2,84 +2,68 @@
 layout: default
 ---
 
-<div class="service-header section section--gradient">
-  <div class="container">
-    <div class="section-header">
-      <h1>{{ page.title }}</h1>
-      {% if page.subtitle %}
-      <p class="subtitle">{{ page.subtitle }}</p>
-      {% endif %}
-    </div>
-  </div>
-</div>
+{% include page-hero.html eyebrow="Service" title=page.title subtitle=page.subtitle %}
 
-<div class="service-content section section--white">
-  <div class="container">
-    <div class="service-grid">
-      <div class="service-main">
-        {{ content }}
-        
-        {% if page.cta_text %}
-        <div class="service-cta card card--option">
-          <h3>{{ page.cta_title | default: "Ready to get started?" }}</h3>
-          <p>{{ page.cta_text }}</p>
-          <a href="{{ page.cta_link | default: '/contact' | relative_url }}" class="btn btn-primary">{{ page.cta_button | default: "Contact Us" }}</a>
-        </div>
-        {% endif %}
-      </div>
-      
-      <div class="service-sidebar">
-        {% if page.benefits %}
-        <div class="service-benefits card">
-          <h3>Benefits</h3>
-          <ul>
-            {% for benefit in page.benefits %}
-            <li>{{ benefit }}</li>
-            {% endfor %}
-          </ul>
-        </div>
-        {% endif %}
-        
-        {% if page.technologies %}
-        <div class="service-technologies card card--option">
-          <h3>Technologies</h3>
-          <div class="tech-tags">
-            {% for tech in page.technologies %}
-            <span class="tech-tag">{{ tech }}</span>
-            {% endfor %}
-          </div>
-        </div>
-        {% endif %}
-      </div>
+<section class="section section--tight">
+  <div class="container detail-grid">
+    <div class="detail-main prose">
+      {{ content }}
     </div>
+
+    <aside class="detail-side">
+      {% if page.benefits %}
+      <div class="side-card">
+        <h2 class="side-card__title">Benefits</h2>
+        <ul class="check-list">
+          {% for benefit in page.benefits %}
+          <li>{% include icon.html name="check" size="16" stroke="2.25" %}<span>{{ benefit }}</span></li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+
+      {% if page.technologies %}
+      <div class="side-card">
+        <h2 class="side-card__title">Technologies</h2>
+        <div class="tag-list">
+          {% for tech in page.technologies %}<span class="tag">{{ tech }}</span>{% endfor %}
+        </div>
+      </div>
+      {% endif %}
+
+      {% if page.cta_text %}
+      <div class="side-card side-card--cta">
+        <h2 class="side-card__heading">{{ page.cta_title | default: "Ready to get started?" }}</h2>
+        <p>{{ page.cta_text }}</p>
+        <a href="{{ page.cta_link | default: '/contact/' | relative_url }}" class="btn btn--primary">{{ page.cta_button | default: "Contact us" }} {% include icon.html name="arrow" size="16" %}</a>
+      </div>
+      {% endif %}
+    </aside>
   </div>
-</div>
+
+  <div class="container">
+    {% include tokenwright-strip.html %}
+  </div>
+</section>
 
 {% if page.featured_projects %}
-<div class="featured-projects section section--light">
+<section class="section section--raised">
   <div class="container">
-    <div class="section-header">
-      <h2>Related Projects</h2>
+    <div class="section-head section-head--split">
+      <div>
+        <p class="eyebrow">Related work</p>
+        <h2>Where we've done this before.</h2>
+      </div>
+      <a class="link-arrow" href="{{ '/projects/' | relative_url }}">All case studies {% include icon.html name="arrow" size="14" %}</a>
     </div>
-    <div class="projects-grid grid grid--3col">
+    <div class="work-grid">
       {% for project_id in page.featured_projects %}
-        {% assign project = site.projects | where: "id", project_id | first %}
-        {% if project %}
-        <div class="card card--project">
-          {% if project.image %}
-          <div class="card--image">
-            <img src="{{ project.image | relative_url }}" alt="{{ project.title }}">
-          </div>
-          {% endif %}
-          <div class="project-info">
-            <h3>{{ project.title }}</h3>
-            <p>{{ project.excerpt }}</p>
-            <a href="{{ project.url | relative_url }}" class="read-more">View Project</a>
-          </div>
-        </div>
-        {% endif %}
+        {% assign project = site.projects | where: "slug", project_id | first %}
+        {% if project %}{% include project-card.html project=project %}{% endif %}
       {% endfor %}
     </div>
   </div>
-</div>
+</section>
 {% endif %}
+
+{% include cta-band.html %}

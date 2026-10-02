@@ -1,0 +1,33 @@
+<header class="site-header" data-header>
+  <div class="container site-header__inner">
+    <a class="brand" href="{{ '/' | relative_url }}" title="{{ site.title }} home">
+      {% include zautre-logo.svg %}
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+      <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span></span>
+      <span class="visually-hidden">Menu</span>
+    </button>
+
+    <nav class="site-nav" id="site-nav" aria-label="Main" data-nav>
+      <ul class="site-nav__list">
+        {%- for item in site.header_pages -%}
+          {%- assign p = site.pages | where: "path", item | first -%}
+          {%- if p.title -%}
+          {%- assign is_current = false -%}
+          {%- if page.url == p.url -%}{%- assign is_current = true -%}{%- endif -%}
+          {%- if p.url != '/' and page.url contains p.url -%}{%- assign is_current = true -%}{%- endif -%}
+          {%- if p.url == '/blog/' and page.layout == 'post' -%}{%- assign is_current = true -%}{%- endif -%}
+          <li>
+            <a href="{{ p.url | relative_url }}"{% if is_current %} aria-current="page"{% endif %}{% if p.nav_badge %} class="has-badge"{% endif %}>
+              {{- p.nav_title | default: p.title -}}
+              {%- if p.nav_badge %}<span class="nav-badge">{{ p.nav_badge }}</span>{% endif -%}
+            </a>
+          </li>
+          {%- endif -%}
+        {%- endfor -%}
+      </ul>
+      <a class="btn btn--primary btn--sm site-nav__cta" href="{{ '/contact/' | relative_url }}">Talk to an engineer</a>
+    </nav>
+  </div>
+</header>

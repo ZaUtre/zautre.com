@@ -1,6 +1,8 @@
 ---
 layout: project
 title: Zenkraft (Bringg) - Integration Cartridge Support
+card_title: "Integration cartridge support"
+card_result: "Shipping & returns cartridge kept robust for SFCC merchants"
 subtitle: Upgrading, Maintaining, and Supporting a Salesforce Native Shipping Solution
 permalink: /projects/zenkraft-bringg/
 featured: false

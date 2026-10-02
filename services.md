@@ -1,97 +1,106 @@
 ---
 layout: page
 title: Services
-subtitle: Creating connected customer centric experiences that grow your digital business
+subtitle: Senior Salesforce Commerce Cloud engineering — from first architecture sketch to peak-day operations.
 permalink: /services/
-image: /assets/images/hero-poster.png
+description: "SFCC development, performance engineering, team augmentation and conversational commerce for retail and luxury brands — plus Tokenwright, AI-accelerated SFCC delivery."
 ---
+{%- assign tw = site.data.tokenwright -%}
 
-<section class="services-header section section--gradient">
+{% include page-hero.html eyebrow="Services" title="Everything your storefront needs to be fast, stable and shippable." subtitle=page.subtitle %}
+
+<section class="section section--tight">
   <div class="container">
-    <div class="section-header">
-      <h1>{{ page.title }}</h1>
-      <p class="subtitle">{{ page.subtitle }}</p>
+    <div class="bento">
+      {%- assign services = site.services | sort: "order" -%}
+      {%- for s in services %}
+      <a class="bento__card" href="{{ s.url | relative_url }}">
+        <span class="bento__icon">{% include icon.html name=s.icon size="22" %}</span>
+        <h2 class="bento__title">{{ s.title }}</h2>
+        <p>{{ s.summary | default: s.excerpt }}</p>
+        <span class="link-arrow">Learn more {% include icon.html name="arrow" size="14" %}</span>
+      </a>
+      {%- endfor %}
+      <a class="bento__card bento__card--tw" href="{{ '/tokenwright/' | relative_url }}">
+        <span class="bento__icon bento__icon--tw">{% include tokenwright-mark.svg size=28 %}</span>
+        <span class="pill pill--tw">New · {{ tw.status }}</span>
+        <h2 class="bento__title">{{ tw.name }}: Managed Tokens for SFCC</h2>
+        <p>Productized, AI-accelerated delivery. Every task quoted in minutes against your actual code, with a firm cap, and delivered as a merge-ready pull request reviewed by a named senior operator.</p>
+        <span class="link-arrow">See how it works {% include icon.html name="arrow" size="14" %}</span>
+      </a>
     </div>
   </div>
 </section>
 
-<div class="services-overview section section--white">
+<section class="section section--raised">
   <div class="container">
-    <p class="section-lead">No matter what you plan: simple storefront, launching new social channels or driving a headless digital strategy, we provide the team to achieve your goal. Our platform experience, agile operating processes and in-depth technical skills will be a solid foundation for your business growth and acceleration of your return on investment. Our teams are agile and will meet your needs with quality and speed so you can deliver while focusing on the customer.</p>
-  </div>
-</div>
+    <div class="section-head section-head--split">
+      <div>
+        <p class="eyebrow">Disciplines</p>
+        <h2>One team. Every discipline commerce needs.</h2>
+      </div>
+      <p class="section-head__lede">Our platform experience, agile delivery and deep technical skills give your business a solid foundation to grow on — whether you're launching a storefront, opening new channels or going headless.</p>
+    </div>
 
-<section class="services-cards-section section section--light">
-  <div class="container">
-    <div class="services-grid grid grid--3col">
-      <div class="card card--service">
+    <div class="card-grid card-grid--3">
+      <article class="card">
+        <span class="card__num">01</span>
         <h3>Architecture</h3>
-        <p>Our architecture team has broad expertise across all systems involved in the ecommerce process; from Commerce Cloud B2C platform itself to OMS and ERP as well as any third party partners that integrate with e-commerce websites.</p>
-      </div>
-      
-      <div class="card card--service">
+        <p>Broad expertise across every system in the commerce flow — B2C Commerce itself, OMS and ERP, and the third-party services your storefront depends on.</p>
+      </article>
+      <article class="card">
+        <span class="card__num">02</span>
         <h3>Development</h3>
-        <p>We employ only certified Salesforce Commerce Cloud developers which are experts on the technical aspects of the platform. All of us are based in Bulgaria and working in the CEE time-zone, but we are used to collaborating with US and Australia based teams.</p>
-        
-      </div>
-      
-      <div class="card card--service">
-        <h3>Project Management</h3>
-        <p>Our project managers are technically competent with a clear view on the project and provide guidance and direction to keep our teams on track and within the budget. We practice exclusively Agile project management techniques.</p>
-        
-      </div>
-      
-      <div class="card card--service">
+        <p>Only certified Salesforce Commerce Cloud developers. Based in Sofia (EET), used to working with teams across Europe, the US and Australia.</p>
+      </article>
+      <article class="card">
+        <span class="card__num">03</span>
+        <h3>Performance</h3>
+        <p>Core Web Vitals, caching strategy, profiling and load testing — so the storefront is fast for shoppers and stable on peak days.</p>
+      </article>
+      <article class="card">
+        <span class="card__num">04</span>
         <h3>Quality Assurance</h3>
-        <p>Our quality engineers specialize in testing e-commerce solutions. They would ensure that the features and functionality adhere to the highest standards in the industry and meet our clients' needs. Solutions are tested across all relevant browsers and devices.</p>
-        
-      </div>
-      
-      <div class="card card--service">
-        <h3>Analysis</h3>
-        <p>We can provide services enabling our clients to optimise their investment in digital commerce by identifying opportunities to drive higher conversion, efficiency and overall create better experiences.</p>
-        
-      </div>
-      
-      <div class="card card--service">
-        <h3>Consulting</h3>
-        <p>We are in the ecommerce development business because we love challenges. We do like solving problems and the bigger the challenge the better we work. You can rely on our consulting services to shed light on even the most complex business needs.</p>
-        
-      </div>
+        <p>QA engineers who specialise in commerce: manual and automated testing across every relevant browser and device, to the industry's highest standards.</p>
+      </article>
+      <article class="card">
+        <span class="card__num">05</span>
+        <h3>Project Management</h3>
+        <p>Technically fluent project managers who keep teams on track and on budget, using agile practices exclusively.</p>
+      </article>
+      <article class="card">
+        <span class="card__num">06</span>
+        <h3>Analysis &amp; Consulting</h3>
+        <p>We find the opportunities to raise conversion and efficiency — and we love a hard problem. The bigger the challenge, the better we work.</p>
+      </article>
     </div>
   </div>
 </section>
 
-<section class="service-options-section section section--white">
+<section class="section">
   <div class="container">
-    <div class="section-header">
-      <h2>Service Options</h2>
+    <div class="section-head">
+      <p class="eyebrow">Engagement models</p>
+      <h2>Work with us the way that fits.</h2>
     </div>
-    <div class="service-options-grid grid grid--3col-md">
-      <div class="card card--option">
-        <h3>Complete Projects</h3>
-        <p>In some cases, we provide the entire e-commerce technology team to build your entire storefront and all its back-end integrations.</p>
-      </div>
-      <div class="card card--option">
-        <h3>Integrations</h3>
-        <p>Going live is just the beginning. Once you are digital, you should never sit still. We help you ideate, test and prioritize innovation that aligns with your customers' evolving expectations and your business goals.</p>
-      </div>
-      <div class="card card--option">
-        <h3>Dedicated Teams</h3>
-        <p>Our clients get a dedicated team that is best fitted to answer their specific needs. Whether you need a couple of developers to write an integration or need a larger team with architecture and business analysis on board.</p>
-      </div>
+    <div class="card-grid card-grid--3">
+      <article class="card card--outline">
+        {% include icon.html name="layers" size="22" class="card__icon" %}
+        <h3>Complete projects</h3>
+        <p>We provide the entire commerce technology team to build your storefront and all of its back-end integrations.</p>
+      </article>
+      <article class="card card--outline">
+        {% include icon.html name="users" size="22" class="card__icon" %}
+        <h3>Dedicated teams</h3>
+        <p>A team shaped to your needs — a couple of developers for an integration, or a full squad with architecture and analysis on board.</p>
+      </article>
+      <article class="card card--outline">
+        {% include icon.html name="activity" size="22" class="card__icon" %}
+        <h3>Maintenance &amp; evolution</h3>
+        <p>Going live is only the beginning. We take over running platforms in weeks, keep them healthy and keep shipping improvements.</p>
+      </article>
     </div>
   </div>
 </section>
 
-<section class="cta-section section section--gradient">
-  <div class="container">
-    <div class="section-header">
-      <h2>Ready to transform your e-commerce experience?</h2>
-      <p class="subtitle">Let's discuss how Zautre can help your retail or luxury brand achieve its digital commerce goals.</p>
-    </div>
-    <div class="text-center">
-      <a href="/contact" class="btn btn-large">Get in Touch</a>
-    </div>
-  </div>
-</section>
+{% include cta-band.html %}

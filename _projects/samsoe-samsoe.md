@@ -1,6 +1,8 @@
 ---
 layout: project
 title: Samsoe Samsoe E-commerce Platform
+card_title: "Platform takeover & PIM integration"
+card_result: "4-week takeover, 100% availability, faster storefront"
 subtitle: SFCC Maintenance & Enhancement
 permalink: /projects/samsoe-samsoe/
 featured: true

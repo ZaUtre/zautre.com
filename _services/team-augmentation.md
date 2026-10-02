@@ -2,6 +2,9 @@
 layout: service
 title: Team Augmentation
 subtitle: Flexible E-commerce Expertise On Demand
+order: 3
+icon: users
+summary: "Certified architects, developers, QA and PMs who plug into your team and contribute from day one. Scale up or down as the roadmap demands."
 permalink: /services/team-augmentation/
 excerpt: Scale your digital capabilities with our specialized e-commerce team augmentation services. Access technical architects, project managers, developers, and QA specialists with deep expertise in SFCC and other platforms.
 benefits:
@@ -22,6 +25,10 @@ related_services:
 cta_title: Need to strengthen your team?
 cta_text: Connect with us to discuss how our team augmentation services can help you meet your project goals and deadlines.
 cta_button: Get Expert Talent
+featured_projects:
+  - shiseido
+  - dior
+  - activebrands
 ---
 
 ## Flexible E-commerce Talent Solutions

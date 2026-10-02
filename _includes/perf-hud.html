@@ -1,0 +1,42 @@
+{%- comment -%}
+  Live performance panel. Values are filled in by assets/js/main.js from the
+  browser's own Performance APIs (Navigation/Resource Timing, LCP, CLS, Event
+  Timing) — nothing here is hard-coded. Ratings use Google's published Core Web
+  Vitals thresholds.
+{%- endcomment -%}
+<aside class="hud" data-hud aria-labelledby="hud-title">
+  <div class="hud__bar">
+    <span class="hud__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span class="hud__title" id="hud-title">perf — zautre.com{{ page.url }}</span>
+    <span class="hud__live"><span class="hud__pulse" aria-hidden="true"></span>Live</span>
+  </div>
+
+  <div class="hud__body">
+    <p class="hud__kicker">This page, measured in <em>your</em> browser, right now.</p>
+
+    <div class="hud__vitals">
+      {%- assign vitals = "lcp:LCP:Largest paint,cls:CLS:Layout shift,inp:INP:Responsiveness" | split: "," -%}
+      {%- for v in vitals -%}
+      {%- assign parts = v | split: ":" %}
+      <div class="vital" data-vital="{{ parts[0] }}">
+        <svg class="vital__ring" viewBox="0 0 48 48" aria-hidden="true"><circle class="vital__track" cx="24" cy="24" r="21"/><circle class="vital__fill" cx="24" cy="24" r="21" pathLength="100"/></svg>
+        <div class="vital__value" data-perf="{{ parts[0] }}">—</div>
+        <div class="vital__label"><abbr title="{{ parts[2] }}">{{ parts[1] }}</abbr></div>
+        <div class="vital__rating" data-rating="{{ parts[0] }}">{% if parts[0] == 'inp' %}tap anywhere{% else %}measuring{% endif %}</div>
+      </div>
+      {%- endfor %}
+    </div>
+
+    <dl class="hud__rows">
+      <div class="hud__row" data-row="ttfb"><dt><abbr title="Time to first byte">TTFB</abbr></dt><dd data-perf="ttfb">—</dd><span class="hud__meter" aria-hidden="true"><i></i></span></div>
+      <div class="hud__row" data-row="fcp"><dt><abbr title="First contentful paint">FCP</abbr></dt><dd data-perf="fcp">—</dd><span class="hud__meter" aria-hidden="true"><i></i></span></div>
+      <div class="hud__row" data-row="weight"><dt>Transfer</dt><dd data-perf="weight">—</dd><span class="hud__meter" aria-hidden="true"><i></i></span></div>
+      <div class="hud__row" data-row="requests"><dt>Requests</dt><dd data-perf="requests">—</dd><span class="hud__meter" aria-hidden="true"><i></i></span></div>
+    </dl>
+  </div>
+
+  <div class="hud__foot">
+    <span>Thresholds: Core Web Vitals</span>
+    <span>Budget: <strong>&lt; 200&nbsp;KB</strong>, 0 frameworks</span>
+  </div>
+</aside>

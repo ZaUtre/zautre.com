@@ -1,0 +1,18 @@
+{%- comment -%}
+  Standard inner-page header. Params: eyebrow, title, subtitle, class
+{%- endcomment -%}
+<header class="page-hero{% if include.class %} {{ include.class }}{% endif %}">
+  <div class="page-hero__bg" aria-hidden="true"></div>
+  <div class="container page-hero__inner">
+    {%- if include.eyebrow %}
+    <p class="eyebrow">{{ include.eyebrow }}</p>
+    {%- endif %}
+    <h1 class="page-hero__title">{{ include.title }}</h1>
+    {%- if include.subtitle %}
+    <p class="page-hero__subtitle">{{ include.subtitle }}</p>
+    {%- endif %}
+    {%- if include.meta %}
+    <div class="page-hero__meta">{{ include.meta }}</div>
+    {%- endif %}
+  </div>
+</header>

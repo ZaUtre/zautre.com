@@ -1,6 +1,8 @@
 ---
 layout: project
 title: EDITED - B2C Commerce Cartridge Certification
+card_title: "B2C Commerce cartridge certification"
+card_result: "Overlay cartridge upgraded, certified and kept current"
 subtitle: Maintaining and Enhancing a Retail Analytics & Insights Overlay for E-commerce Sites
 permalink: /projects/edited-cartridge/
 featured: false

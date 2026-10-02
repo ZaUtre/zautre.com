@@ -2,6 +2,9 @@
 layout: service
 title: SFCC Development
 subtitle: Expert Salesforce Commerce Cloud Solutions
+order: 1
+icon: code
+summary: "Full-cycle Salesforce B2C Commerce builds — SFRA, PWA and headless — architected for scale, speed and long-term maintainability."
 permalink: /services/sfcc-development/
 featured: true
 excerpt: Comprehensive Salesforce Commerce Cloud (SFCC) development services for retail and luxury brands. From implementation to optimization, we deliver robust e-commerce solutions on Salesforce's powerful platform.
@@ -27,6 +30,8 @@ cta_text: Our experts are ready to help you implement, optimize, or enhance your
 cta_button: Request SFCC Consultation
 featured_projects:
   - multiopticas
+  - montblanc
+  - samsoe-samsoe
 ---
 
 ## Expert Salesforce Commerce Cloud Development

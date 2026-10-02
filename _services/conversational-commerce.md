@@ -2,6 +2,9 @@
 layout: service
 title: Conversational Commerce
 subtitle: AI-Powered Customer Interactions
+order: 4
+icon: chat
+summary: "AI shopping assistants grounded in your catalogue and order data — product discovery, support and recommendations that convert."
 permalink: /services/conversational-commerce/
 excerpt: Transform your customer experience with our AI-driven conversational commerce solutions. Integrate cutting-edge technologies like OpenAI and ChatGPT with your e-commerce platform to create personalized, interactive shopping experiences.
 benefits:

@@ -1,6 +1,8 @@
 ---
 layout: project
 title: Shiseido Corp. - Global E-commerce Architectural Support & Composable Strategy
+card_title: "Global architecture & composable strategy"
+card_result: "4+ years of architecture for a worldwide codebase"
 subtitle: Providing long-term architectural guidance and designing a future-ready composable storefront solution for a global cosmetics leader.
 permalink: /projects/shiseido/
 featured: false

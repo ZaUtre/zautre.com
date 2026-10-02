@@ -1,0 +1,18 @@
+{%- comment -%}
+  Responsive image. Serves a sibling .webp when one exists in the repo,
+  falling back to the original file. Always pass width/height so the browser
+  reserves space (no layout shift).
+
+  Params: src (required), alt, width, height, class, sizes,
+          loading ("lazy" default, "eager" for above-the-fold),
+          fetchpriority ("high" for the LCP image)
+{%- endcomment -%}
+{%- assign _src = include.src -%}
+{%- assign _ext = _src | split: '.' | last -%}
+{%- assign _stem_len = _src | size | minus: _ext.size | minus: 1 -%}
+{%- assign _webp = _src | slice: 0, _stem_len | append: '.webp' -%}
+{%- assign _has_webp = site.static_files | where: "path", _webp | first -%}
+<picture{% if include.class %} class="{{ include.class }}"{% endif %}>
+  {%- if _has_webp and _ext != 'webp' %}<source type="image/webp" srcset="{{ _webp | relative_url }}">{% endif -%}
+  <img src="{{ _src | relative_url }}" alt="{{ include.alt | escape }}"{% if include.width %} width="{{ include.width }}" height="{{ include.height }}"{% endif %} loading="{{ include.loading | default: 'lazy' }}" decoding="async"{% if include.fetchpriority %} fetchpriority="{{ include.fetchpriority }}"{% endif %}{% if include.sizes %} sizes="{{ include.sizes }}"{% endif %}>
+</picture>

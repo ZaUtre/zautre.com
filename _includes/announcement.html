@@ -1,0 +1,10 @@
+{%- assign tw = site.data.tokenwright -%}
+<aside class="announce" aria-label="Announcement">
+  <div class="container announce__inner">
+    <a class="announce__link" href="{{ '/tokenwright/' | relative_url }}">
+      <span class="announce__badge">New</span>
+      <span class="announce__text"><strong>{{ tw.name }}</strong><span class="announce__sep" aria-hidden="true">·</span><span class="announce__long">SFCC work quoted in minutes, merge-ready PRs in days.</span><span class="announce__short">AI-accelerated SFCC delivery.</span></span>
+      <span class="announce__cta">Learn more {% include icon.html name="arrow" size="14" %}</span>
+    </a>
+  </div>
+</aside>

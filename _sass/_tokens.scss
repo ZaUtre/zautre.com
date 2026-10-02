@@ -1,0 +1,111 @@
+/* ==========================================================================
+   Design tokens
+   Three accents, each with one job:
+   --accent  ZaUtre blue - links, focus, interactive highlights
+   --good    signal green - "passing" performance states
+   --tw-*    Tokenwright chrome yellow + paper - reserved for Tokenwright
+   ========================================================================== */
+
+@font-face {
+  font-family: "Geist";
+  font-style: normal;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url("../fonts/geist-latin.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Geist Mono";
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url("../fonts/geist-mono-latin.woff2") format("woff2");
+}
+
+/* Metric-matched fallbacks: local Arial / Courier New scaled to Geist's
+   proportions, so swapping in the web font causes no visible layout shift.
+   (Arial and Helvetica share widths; Liberation Sans is the Linux clone.) */
+@font-face {
+  font-family: "Geist Fallback";
+  src: local("Arial"), local("Helvetica"), local("Liberation Sans");
+  size-adjust: 104.73%;
+  ascent-override: 95.96%;
+  descent-override: 28.17%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "Geist Mono Fallback";
+  src: local("Courier New"), local("Liberation Mono");
+  size-adjust: 100%;
+  ascent-override: 100.5%;
+  descent-override: 29.5%;
+  line-gap-override: 0%;
+}
+
+:root {
+  /* Surfaces */
+  --bg: #07080a;
+  --bg-1: #0b0d10;
+  --bg-2: #101317;
+  --bg-3: #161a1f;
+  --bg-4: #1d2228;
+
+  /* Lines */
+  --line: rgba(255, 255, 255, 0.075);
+  --line-2: rgba(255, 255, 255, 0.13);
+  --line-3: rgba(255, 255, 255, 0.22);
+
+  /* Text */
+  --fg: #f3f5f7;
+  --fg-2: #b6bec8;
+  --fg-3: #9aa3ad;
+  --fg-4: #808a95; /* >= 4.9:1 on every dark surface (WCAG AA) */
+
+  /* Accents */
+  --accent: #5b9dff;
+  --accent-2: #8db9ff;
+  --accent-glow: rgba(91, 157, 255, 0.22);
+  --good: #2fd67b;
+  --good-glow: rgba(47, 214, 123, 0.25);
+  --ok: #ffb020;
+  --poor: #ff5a4f;
+
+  /* Tokenwright */
+  --tw: #e8b500;
+  --tw-hi: #f2d14e;
+  --tw-deep: #806200; /* gold for text on paper, >= 5:1 */
+  --tw-ink: #1a1a1a;
+  --tw-ink-2: #3a352e;
+  --tw-ink-3: #5c5750;
+  --tw-paper: #fbfaf8;
+  --tw-paper-2: #f4f1eb;
+  --tw-rule: #e4dfd6;
+
+  /* Type */
+  --font: "Geist", "Geist Fallback", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --mono: "Geist Mono", "Geist Mono Fallback", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --serif: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
+
+  /* Layout */
+  --container: 1240px;
+  --gutter: 20px;
+  --section: 96px;
+  --radius-sm: 8px;
+  --radius: 14px;
+  --radius-lg: 20px;
+  --header-h: 68px;
+
+  /* Motion */
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --t-fast: 150ms var(--ease);
+  --t: 260ms var(--ease);
+}
+
+@media (min-width: 768px) {
+  :root {
+    --gutter: 32px;
+    --section: 112px;
+  }
+}

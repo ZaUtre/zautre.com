@@ -1,6 +1,8 @@
 ---
 layout: project
-title: Montblanc UAE ana KSA E-commerce Platform
+title: Montblanc UAE and KSA E-commerce Platform
+card_title: "UAE & KSA commerce platform"
+card_result: "Platform takeover in 4 weeks with 100% uptime"
 subtitle: Gemini project build and SFCC Maintenance
 permalink: /projects/montblanc/
 featured: false

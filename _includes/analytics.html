@@ -1,0 +1,16 @@
+{%- comment -%}
+  Apollo website tracker. Loaded after the window `load` event (and when the
+  browser is idle) so third-party JS never competes with rendering.
+{%- endcomment -%}
+<script>
+  window.addEventListener('load', function () {
+    var start = function () {
+      var s = document.createElement('script');
+      s.src = 'https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache=' + Math.random().toString(36).substring(7);
+      s.async = true;
+      s.onload = function () { window.trackingFunctions && window.trackingFunctions.onLoad({ appId: '67ed3b3a6c20a700114546f5' }); };
+      document.head.appendChild(s);
+    };
+    'requestIdleCallback' in window ? requestIdleCallback(start, { timeout: 3000 }) : setTimeout(start, 1500);
+  });
+</script>

@@ -1,6 +1,8 @@
 ---
 layout: project
 title: Dior Perfumes - Architecture Leadership
+card_title: "Architecture leadership"
+card_result: "Roadmap, architecture strategy and risk management across SFCC teams"
 subtitle: Leading discovery, defining roadmap, and overseeing technical execution for Parfums Christian Dior's digital initiatives.
 permalink: /projects/dior-perfumes/
 featured: false

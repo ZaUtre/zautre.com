@@ -1,26 +1,21 @@
 ---
 layout: default
-title: Page Not Found
+title: Page not found
 permalink: /404.html
+sitemap: false
 ---
 
-<section class="error-header section section--gradient">
-  <div class="container">
-    <div class="section-header">
-      <h1>404</h1>
-      <p class="section-lead">The page you're looking for doesn't exist or has been moved.</p>
-    </div>
-  </div>
-</section>
-
-<section class="error-content section section--white">
-  <div class="container" style="text-align: center; padding: 4rem 1rem;">
-    <h2>Let's get you back on track</h2>
-    <p style="color: var(--medium-gray); margin-bottom: 2rem;">Here are some pages that might help:</p>
-    <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-      <a href="{{ '/services' | relative_url }}" class="btn btn-primary">Our Services</a>
-      <a href="{{ '/projects' | relative_url }}" class="btn btn-secondary">Case Studies</a>
-      <a href="{{ '/contact' | relative_url }}" class="btn">Contact Us</a>
+<section class="page-hero page-hero--404">
+  <div class="page-hero__bg" aria-hidden="true"></div>
+  <div class="container page-hero__inner">
+    <p class="eyebrow">Error 404</p>
+    <h1 class="page-hero__title">This page took 0&nbsp;ms to not exist.</h1>
+    <p class="page-hero__subtitle">The page you're looking for has moved or never was. Fast, at least. Here's where to go next:</p>
+    <div class="hero__actions">
+      <a href="{{ '/' | relative_url }}" class="btn btn--primary">Back to home {% include icon.html name="arrow" size="16" %}</a>
+      <a href="{{ '/projects/' | relative_url }}" class="btn btn--ghost">Case studies</a>
+      <a href="{{ '/tokenwright/' | relative_url }}" class="btn btn--ghost">{% include tokenwright-mark.svg size=18 %} Tokenwright</a>
+      <a href="{{ '/contact/' | relative_url }}" class="btn btn--ghost">Contact</a>
     </div>
   </div>
 </section>

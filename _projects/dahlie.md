@@ -1,6 +1,8 @@
 ---
 layout: project
 title: Dæhlie - Automated Software Testing Framework
+card_title: "Automated frontend testing framework"
+card_result: "Automated coverage across most of the storefront frontend"
 subtitle: Enhancing Quality Assurance for a Performance Sportswear Brand
 permalink: /projects/daehlie/
 featured: false
